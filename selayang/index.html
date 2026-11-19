@@ -272,6 +272,73 @@ body{font-size:16px;letter-spacing:-.003em}
 @media(max-width:640px){h2{font-size:clamp(36px,9.4vw,44px)}h3{font-size:30px}}
 
 @media(prefers-reduced-motion:reduce){.rv-in{opacity:1!important;transform:none!important;transition:none!important}}
+/* v4 sinematik */
+.wm{display:flex;align-items:center;gap:10px;color:var(--ink);line-height:1;text-decoration:none}
+.wm .lf{width:24px;height:30px;transform:rotate(-16deg);flex:none}
+.wm b{display:block;font:700 21px/1 "Cormorant Garamond",serif;letter-spacing:.07em;text-transform:uppercase;border-bottom:1.5px solid currentColor;padding-bottom:4px;white-space:nowrap}
+.wm i{display:block;font:600 9px/1 "Plus Jakarta Sans",sans-serif;letter-spacing:.5em;text-transform:uppercase;font-style:normal;margin-top:5px;text-align:center;color:var(--gold)}
+.lg{background:none;padding:0}.lg img{height:96px}
+.hero.film:after{background:linear-gradient(90deg,rgba(12,22,15,.62) 0%,rgba(12,22,15,.18) 55%,rgba(12,22,15,0) 100%),linear-gradient(180deg,rgba(12,22,15,.05) 35%,rgba(12,22,15,.8) 100%)}
+.sl{position:absolute;inset:0;overflow:hidden;background:#1a2a20}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;will-change:opacity,transform;animation:kb 24s linear infinite}
+.sl img:nth-child(1){animation-name:kb1}
+.sl img:nth-child(2){animation-delay:6s}.sl img:nth-child(3){animation-delay:12s}.sl img:nth-child(4){animation-delay:18s}
+@keyframes kb{0%{opacity:0;transform:scale(1.14) translate3d(1%,0,0)}5%{opacity:1}25%{opacity:1}33%{opacity:0;transform:scale(1.02) translate3d(-1%,-1%,0)}100%{opacity:0;transform:scale(1.02)}}
+@keyframes kb1{0%{opacity:1;transform:scale(1.14)}25%{opacity:1}33%{opacity:0;transform:scale(1.02) translate3d(-1%,-1%,0)}95%{opacity:0;transform:scale(1.14)}100%{opacity:1;transform:scale(1.14)}}
+.hero .wrap>*{animation:naik 1.2s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.15s}.hero .wrap>*:nth-child(3){animation-delay:.35s}.hero .wrap>*:nth-child(4){animation-delay:.5s}.hero .wrap>*:nth-child(5){animation-delay:.65s}
+@keyframes naik{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.cue{position:absolute;z-index:3;left:50%;bottom:22px;width:24px;height:38px;margin-left:-12px;border:1.5px solid rgba(255,255,255,.7);border-radius:14px}
+.cue i{position:absolute;left:50%;top:7px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:#fff;animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+.evrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:34px}
+.evrow span{font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-right:6px}
+.evrow a{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:14.5px;color:var(--leaf);transition:.25s}
+.evrow a:hover{background:var(--leaf);color:#fff;border-color:var(--leaf)}
+.film2{position:relative;overflow:hidden;color:#fff;padding:140px 0;min-height:88vh;display:flex;align-items:center;background:#14261d}
+.film2 .px{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;will-change:transform}
+.film2:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(12,22,15,.72),rgba(12,22,15,.9))}
+.film2 .wrap{position:relative;z-index:2;text-align:center;max-width:900px}
+.film2 .kick{color:var(--gold2)}.film2 .kick:before{background:var(--gold2)}
+.qs{display:grid;margin-top:26px}
+.qs blockquote{grid-area:1/1;opacity:0;transform:translateY(14px);transition:opacity 1s,transform 1s;pointer-events:none}
+.qs blockquote.on{opacity:1;transform:none;pointer-events:auto}
+.qs q{display:block;font:italic 600 clamp(24px,3.2vw,38px)/1.3 "Cormorant Garamond",serif;quotes:"“" "”"}
+.qs cite{display:block;margin-top:22px;font-style:normal;font-size:14.5px;color:#e6dcc6;letter-spacing:.04em}
+.qs cite b{color:#fff}
+.qd{display:flex;justify-content:center;gap:10px;margin-top:28px}
+.qd button{width:28px;height:3px;border:0;border-radius:2px;background:rgba(255,255,255,.35);cursor:pointer;padding:0;transition:.3s}
+.qd button.on{background:var(--gold2);width:44px}
+.gb2{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 16px;margin-top:34px;font-size:15px;color:#f1e9d8}
+.gb2 b{color:var(--gold2);font-size:18px}
+.gb2 a{color:#fff;border-bottom:1px solid var(--gold2);padding-bottom:2px}
+#gal{display:grid;columns:auto;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}
+#gal img{height:100%;object-fit:cover;margin:0;display:block}
+#gal img:first-child{grid-column:span 2;grid-row:span 2}
+#gal img:hover{opacity:1;transform:scale(1.015)}
+.btn-line2{border:1px solid var(--leaf);color:var(--leaf);background:transparent}
+.btn-line2:hover{background:var(--leaf);color:#fff}
+.gmore{margin-top:22px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.stp{display:none;gap:18px}
+.stp.on{display:grid;animation:naik .5s cubic-bezier(.2,.7,.2,1)}
+.prog{display:flex;align-items:center;gap:14px;margin-bottom:22px;font-size:13px;color:var(--mute);font-weight:500}
+.prog .bar{flex:1;height:4px;background:var(--line);border-radius:4px;overflow:hidden}
+.prog .bar i{display:block;height:100%;width:33.3%;background:var(--gold);transition:width .5s}
+.snav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:6px}
+.snav .btn{margin-left:auto}
+.bk2{background:none;border:0;font:600 14.5px "Plus Jakarta Sans",sans-serif;color:var(--mute);cursor:pointer;padding:10px 0}
+.bk2:hover{color:var(--leaf)}
+.err{color:#b3261e;font-size:14px;font-weight:500}
+.ring{background:var(--ivory);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14.5px;color:var(--mute);line-height:1.6}
+.ring b{color:var(--leaf)}
+.bk .pic img{aspect-ratio:1}
+.faqw{margin-top:64px}
+.faqw .fq{font-size:30px;text-align:center}
+.faqw .faq{margin-top:20px}
+@media(max-width:960px){#gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.film2{padding:100px 0;min-height:auto}}
+@media(max-width:620px){#gal img{display:block!important}.wm b{font-size:18px}.wm i{font-size:8px;letter-spacing:.42em}.wm .lf{width:20px;height:26px}.cue{display:none}.bk .pic{display:none}.faqw{margin-top:44px}}
+@media(prefers-reduced-motion:reduce){.sl img{animation:none}.sl img:first-child{opacity:1}.hero .wrap>*,.stp.on{animation:none}.qs blockquote{transition:none}}
 
 .brnav{background:#fff;border-bottom:1px solid var(--line)}
 .brnav .wrap{display:flex;gap:8px;align-items:center;overflow-x:auto;padding-top:12px;padding-bottom:12px}
@@ -310,14 +377,14 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
 <body>
 <div class="top"><div class="wrap"><span>Selasa – Ahad · 11 pagi – 6 petang</span><span>Cawangan Selayang · Danial 011-2182 0084</span></div></div>
 <header><div class="wrap">
-  <a href="/" class="logo" aria-label="Sireh Junjung Banquet Hall, halaman utama"><img src="/img/logo.jpg" alt="Logo Sireh Junjung Banquet Hall" width="74" height="60"></a>
+  <a href="/" class="wm" aria-label="Sireh Junjung Banquet Hall, halaman utama"><svg class="lf" viewBox="0 0 32 40" aria-hidden="true"><defs><linearGradient id="lfg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8cc63f"/><stop offset="1" stop-color="#2e7d32"/></linearGradient></defs><path d="M16 39C6 30 1 20 3 11 5 4 12 2 16 7c4-5 11-3 13 4 2 9-3 19-13 28z" fill="url(#lfg)"/><path d="M16 37V8M16 15l-6-3M16 21l7-4M16 27l-6-3M16 32l5-3" stroke="#eaf6dc" stroke-width="1" fill="none" opacity=".75"/></svg><span><b>Sireh Junjung</b><i>Banquet Hall</i></span></a>
   <nav><a href="/">Utama</a><a href="#dewan">Dewan</a><a href="#galeri">Galeri</a><a href="#lokasi">Lokasi</a><a href="#tempah">Tempah</a></nav>
   <div class="hd-r"><button class="mnu" id="mnu" aria-label="Menu" aria-expanded="false"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><a href="#tempah" class="btn btn-gold">Semak tarikh</a></div>
 </div>
 <div class="mnav" id="mnav" hidden><a href="/">Utama</a><a href="#dewan">Dewan</a><a href="#galeri">Galeri</a><a href="#lokasi">Lokasi</a><a href="#tempah">Tempah</a></div></header>
 <div class="brnav"><div class="wrap"><span>Cawangan:</span><a href="/kota-damansara/">Kota Damansara</a><a href="/selayang/" class=on aria-current=page>Selayang</a><a href="/sri-gombak/">Sri Gombak</a></div></div>
 
-<section class="hero" style="padding:0"><img src="/img/sl/sl01.jpg" alt="Pelamin putih berhias bunga segar di dewan Sireh Junjung Selayang" fetchpriority="high" width="1400" height="934"><div class="wrap">
+<section class="hero" style="padding:0"><img src="/img/sl/sl01.webp" alt="Pelamin putih berhias bunga segar di dewan Sireh Junjung Selayang" fetchpriority="high" width="1400" height="934"><div class="wrap">
     <p class="crumb"><a href="/">Sireh Junjung</a> › Cawangan Selayang</p>
     <span class="kick">Cawangan Selayang</span>
     <h1>Dewan perkahwinan di <em>Selayang.</em></h1>
@@ -330,7 +397,7 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
   <span class="kick">Dewan · Selayang</span>
   <h2>Pelamin bunga segar, <em>dewan yang terang.</em></h2>
   <div class="solo">
-    <div class="ph"><img src="/img/sl/sl03.jpg" alt="Laluan pengantin menuju pelamin di dewan Selayang" loading="lazy" width="1400" height="934"></div>
+    <div class="ph"><img src="/img/sl/sl03.webp" alt="Laluan pengantin menuju pelamin di dewan Selayang" loading="lazy" width="1400" height="934"></div>
     <div>
       <h3 style="font-size:34px">Dewan Selayang</h3>
       <ul>
@@ -345,14 +412,14 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
     </div>
   </div>
 </div></section>
-<section id="galeri" class="ev-bg"><div class="wrap"><span class="kick">Galeri</span><h2>Majlis di <em>Selayang.</em></h2><div class="galg" id="galg"><img src="/img/sl/t/sl01.jpg" data-f="/img/sl/sl01.jpg" data-i="0" alt="Majlis di Sireh Junjung Selayang, gambar 1" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl02.jpg" data-f="/img/sl/sl02.jpg" data-i="1" alt="Majlis di Sireh Junjung Selayang, gambar 2" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl03.jpg" data-f="/img/sl/sl03.jpg" data-i="2" alt="Majlis di Sireh Junjung Selayang, gambar 3" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl04.jpg" data-f="/img/sl/sl04.jpg" data-i="3" alt="Majlis di Sireh Junjung Selayang, gambar 4" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl05.jpg" data-f="/img/sl/sl05.jpg" data-i="4" alt="Majlis di Sireh Junjung Selayang, gambar 5" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl06.jpg" data-f="/img/sl/sl06.jpg" data-i="5" alt="Majlis di Sireh Junjung Selayang, gambar 6" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl07.jpg" data-f="/img/sl/sl07.jpg" data-i="6" alt="Majlis di Sireh Junjung Selayang, gambar 7" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl08.jpg" data-f="/img/sl/sl08.jpg" data-i="7" alt="Majlis di Sireh Junjung Selayang, gambar 8" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl09.jpg" data-f="/img/sl/sl09.jpg" data-i="8" alt="Majlis di Sireh Junjung Selayang, gambar 9" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl10.jpg" data-f="/img/sl/sl10.jpg" data-i="9" alt="Majlis di Sireh Junjung Selayang, gambar 10" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl11.jpg" data-f="/img/sl/sl11.jpg" data-i="10" alt="Majlis di Sireh Junjung Selayang, gambar 11" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl12.jpg" data-f="/img/sl/sl12.jpg" data-i="11" alt="Majlis di Sireh Junjung Selayang, gambar 12" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl13.jpg" data-f="/img/sl/sl13.jpg" data-i="12" alt="Majlis di Sireh Junjung Selayang, gambar 13" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl14.jpg" data-f="/img/sl/sl14.jpg" data-i="13" alt="Majlis di Sireh Junjung Selayang, gambar 14" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl15.jpg" data-f="/img/sl/sl15.jpg" data-i="14" alt="Majlis di Sireh Junjung Selayang, gambar 15" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl16.jpg" data-f="/img/sl/sl16.jpg" data-i="15" alt="Majlis di Sireh Junjung Selayang, gambar 16" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl17.jpg" data-f="/img/sl/sl17.jpg" data-i="16" alt="Majlis di Sireh Junjung Selayang, gambar 17" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl18.jpg" data-f="/img/sl/sl18.jpg" data-i="17" alt="Majlis di Sireh Junjung Selayang, gambar 18" loading="lazy" width="570" height="760"></div></div></section>
+<section id="galeri" class="ev-bg"><div class="wrap"><span class="kick">Galeri</span><h2>Majlis di <em>Selayang.</em></h2><div class="galg" id="galg"><img src="/img/sl/t/sl01.webp" data-f="/img/sl/sl01.webp" data-i="0" alt="Majlis di Sireh Junjung Selayang, gambar 1" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl02.webp" data-f="/img/sl/sl02.webp" data-i="1" alt="Majlis di Sireh Junjung Selayang, gambar 2" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl03.webp" data-f="/img/sl/sl03.webp" data-i="2" alt="Majlis di Sireh Junjung Selayang, gambar 3" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl04.webp" data-f="/img/sl/sl04.webp" data-i="3" alt="Majlis di Sireh Junjung Selayang, gambar 4" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl05.webp" data-f="/img/sl/sl05.webp" data-i="4" alt="Majlis di Sireh Junjung Selayang, gambar 5" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl06.webp" data-f="/img/sl/sl06.webp" data-i="5" alt="Majlis di Sireh Junjung Selayang, gambar 6" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl07.webp" data-f="/img/sl/sl07.webp" data-i="6" alt="Majlis di Sireh Junjung Selayang, gambar 7" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl08.webp" data-f="/img/sl/sl08.webp" data-i="7" alt="Majlis di Sireh Junjung Selayang, gambar 8" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl09.webp" data-f="/img/sl/sl09.webp" data-i="8" alt="Majlis di Sireh Junjung Selayang, gambar 9" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl10.webp" data-f="/img/sl/sl10.webp" data-i="9" alt="Majlis di Sireh Junjung Selayang, gambar 10" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl11.webp" data-f="/img/sl/sl11.webp" data-i="10" alt="Majlis di Sireh Junjung Selayang, gambar 11" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl12.webp" data-f="/img/sl/sl12.webp" data-i="11" alt="Majlis di Sireh Junjung Selayang, gambar 12" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl13.webp" data-f="/img/sl/sl13.webp" data-i="12" alt="Majlis di Sireh Junjung Selayang, gambar 13" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl14.webp" data-f="/img/sl/sl14.webp" data-i="13" alt="Majlis di Sireh Junjung Selayang, gambar 14" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl15.webp" data-f="/img/sl/sl15.webp" data-i="14" alt="Majlis di Sireh Junjung Selayang, gambar 15" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl16.webp" data-f="/img/sl/sl16.webp" data-i="15" alt="Majlis di Sireh Junjung Selayang, gambar 16" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl17.webp" data-f="/img/sl/sl17.webp" data-i="16" alt="Majlis di Sireh Junjung Selayang, gambar 17" loading="lazy" width="760" height="507"><img src="/img/sl/t/sl18.webp" data-f="/img/sl/sl18.webp" data-i="17" alt="Majlis di Sireh Junjung Selayang, gambar 18" loading="lazy" width="570" height="760"></div></div></section>
 <section class="rev-bg"><div class="wrap"><span class="kick">Ulasan Google</span><h2>Kata tetamu di <em>Selayang.</em></h2><div class="revs">
     <div class="rv rv-in"><span class="st">★★★★★</span><q>Dewan cantik ✅ Sejuk ✅ Makanan sedap ✅</q><span class="who"><b>Nur Nabila</b>Tetamu</span></div>
     <div class="rv rv-in"><span class="st">★★★★★</span><q>Dewan ni sumpah cantik. Bersih, kemas semua. Korang kena try book dewan ni 🥰</q><span class="who"><b>Danish Haqim</b>Tetamu</span></div>
     <div class="rv rv-in"><span class="st">★★★★★</span><q>Cosy and comfortable.</q><span class="who"><b>Mohd Rafi</b>Tetamu</span></div>
   </div><div class="gbadge"><b>4.5</b><div><span class="st" style="color:var(--gold2);letter-spacing:3px">★★★★★</span><br><span>8 ulasan di Google Maps</span></div><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Sireh+Junjung+Banquet+Hall+Batu+Caves" target="_blank" rel="noopener">Baca semua ulasan</a></div></div></section>
 <section id="tempah"><div class="wrap bk">
-  <div class="pic rv-in"><img src="/img/sl/sl04.jpg" alt="Majlis di Sireh Junjung Selayang" loading="lazy" width="1400" height="934"></div>
+  <div class="pic rv-in"><img src="/img/sl/sl04.webp" alt="Majlis di Sireh Junjung Selayang" loading="lazy" width="1400" height="934"></div>
   <div>
     <span class="kick">Semak tarikh · Selayang</span>
     <h2>Rancang <em>majlis impian.</em></h2>
@@ -387,10 +454,10 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
 
 <footer><div class="wrap">
   <div class="g">
-    <div><span class="lg"><img src="/img/logo.jpg" alt="Sireh Junjung Banquet Hall" loading="lazy" width="640" height="434"></span><p style="margin-top:16px;max-width:300px">Dewan perkahwinan dan majlis di Kota Damansara, Selayang dan Sri Gombak.</p></div>
+    <div><span class="lg"><img src="/img/logo-krim.png" alt="Sireh Junjung Banquet Hall" loading="lazy" width="640" height="434"></span><p style="margin-top:16px;max-width:300px">Dewan perkahwinan dan majlis di Kota Damansara, Selayang dan Sri Gombak.</p></div>
     <div><h4>Cawangan</h4><ul><li><a href="/kota-damansara/">Kota Damansara · Dewi</a></li><li><a href="/selayang/">Selayang · Danial</a></li><li><a href="/sri-gombak/">Sri Gombak · Nabila</a></li></ul></div>
     <div><h4>Pautan</h4><ul><li><a href="/">Halaman utama</a></li><li><a href="#tempah">Semak tarikh</a></li><li><a href="#lokasi">Lokasi</a></li></ul></div>
-    <div><h4>Pejabat</h4><ul><li>Selasa – Ahad, 11 pagi – 6 petang</li><li>Isnin: cuti</li><li>WhatsApp: <a href="https://wa.me/601162186678" target="_blank" rel="noopener">011-6218 6678</a></li></ul></div>
+    <div><h4>Pejabat</h4><ul><li>Selasa – Ahad, 11 pagi – 6 petang</li><li>Isnin: ditutup</li><li>WhatsApp: <a href="https://wa.me/601162186678" target="_blank" rel="noopener">011-6218 6678</a></li></ul></div>
   </div>
   <div class="cp"><span>© 2026 Dstrand Banquet Hall Sdn Bhd · Sireh Junjung Banquet Hall</span><span>Maklumat yang diisi hanya digunakan untuk membalas pertanyaan. <a href="/privasi.html">Notis Privasi</a></span><span>Website oleh <a href="https://hasfiwebdesign.github.io/portfolio/" target="_blank" rel="noopener">Hasfi Web Design</a></span></div>
 </div></footer>

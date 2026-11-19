@@ -271,6 +271,73 @@ body{font-size:16px;letter-spacing:-.003em}
 @media(max-width:640px){h2{font-size:clamp(36px,9.4vw,44px)}h3{font-size:30px}}
 
 @media(prefers-reduced-motion:reduce){.rv-in{opacity:1!important;transform:none!important;transition:none!important}}
+/* v4 sinematik */
+.wm{display:flex;align-items:center;gap:10px;color:var(--ink);line-height:1;text-decoration:none}
+.wm .lf{width:24px;height:30px;transform:rotate(-16deg);flex:none}
+.wm b{display:block;font:700 21px/1 "Cormorant Garamond",serif;letter-spacing:.07em;text-transform:uppercase;border-bottom:1.5px solid currentColor;padding-bottom:4px;white-space:nowrap}
+.wm i{display:block;font:600 9px/1 "Plus Jakarta Sans",sans-serif;letter-spacing:.5em;text-transform:uppercase;font-style:normal;margin-top:5px;text-align:center;color:var(--gold)}
+.lg{background:none;padding:0}.lg img{height:96px}
+.hero.film:after{background:linear-gradient(90deg,rgba(12,22,15,.62) 0%,rgba(12,22,15,.18) 55%,rgba(12,22,15,0) 100%),linear-gradient(180deg,rgba(12,22,15,.05) 35%,rgba(12,22,15,.8) 100%)}
+.sl{position:absolute;inset:0;overflow:hidden;background:#1a2a20}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;will-change:opacity,transform;animation:kb 24s linear infinite}
+.sl img:nth-child(1){animation-name:kb1}
+.sl img:nth-child(2){animation-delay:6s}.sl img:nth-child(3){animation-delay:12s}.sl img:nth-child(4){animation-delay:18s}
+@keyframes kb{0%{opacity:0;transform:scale(1.14) translate3d(1%,0,0)}5%{opacity:1}25%{opacity:1}33%{opacity:0;transform:scale(1.02) translate3d(-1%,-1%,0)}100%{opacity:0;transform:scale(1.02)}}
+@keyframes kb1{0%{opacity:1;transform:scale(1.14)}25%{opacity:1}33%{opacity:0;transform:scale(1.02) translate3d(-1%,-1%,0)}95%{opacity:0;transform:scale(1.14)}100%{opacity:1;transform:scale(1.14)}}
+.hero .wrap>*{animation:naik 1.2s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.15s}.hero .wrap>*:nth-child(3){animation-delay:.35s}.hero .wrap>*:nth-child(4){animation-delay:.5s}.hero .wrap>*:nth-child(5){animation-delay:.65s}
+@keyframes naik{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.cue{position:absolute;z-index:3;left:50%;bottom:22px;width:24px;height:38px;margin-left:-12px;border:1.5px solid rgba(255,255,255,.7);border-radius:14px}
+.cue i{position:absolute;left:50%;top:7px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:#fff;animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(12px)}}
+.evrow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:34px}
+.evrow span{font-size:12.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-right:6px}
+.evrow a{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 16px;font-size:14.5px;color:var(--leaf);transition:.25s}
+.evrow a:hover{background:var(--leaf);color:#fff;border-color:var(--leaf)}
+.film2{position:relative;overflow:hidden;color:#fff;padding:140px 0;min-height:88vh;display:flex;align-items:center;background:#14261d}
+.film2 .px{position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;will-change:transform}
+.film2:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(12,22,15,.72),rgba(12,22,15,.9))}
+.film2 .wrap{position:relative;z-index:2;text-align:center;max-width:900px}
+.film2 .kick{color:var(--gold2)}.film2 .kick:before{background:var(--gold2)}
+.qs{display:grid;margin-top:26px}
+.qs blockquote{grid-area:1/1;opacity:0;transform:translateY(14px);transition:opacity 1s,transform 1s;pointer-events:none}
+.qs blockquote.on{opacity:1;transform:none;pointer-events:auto}
+.qs q{display:block;font:italic 600 clamp(24px,3.2vw,38px)/1.3 "Cormorant Garamond",serif;quotes:"“" "”"}
+.qs cite{display:block;margin-top:22px;font-style:normal;font-size:14.5px;color:#e6dcc6;letter-spacing:.04em}
+.qs cite b{color:#fff}
+.qd{display:flex;justify-content:center;gap:10px;margin-top:28px}
+.qd button{width:28px;height:3px;border:0;border-radius:2px;background:rgba(255,255,255,.35);cursor:pointer;padding:0;transition:.3s}
+.qd button.on{background:var(--gold2);width:44px}
+.gb2{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px 16px;margin-top:34px;font-size:15px;color:#f1e9d8}
+.gb2 b{color:var(--gold2);font-size:18px}
+.gb2 a{color:#fff;border-bottom:1px solid var(--gold2);padding-bottom:2px}
+#gal{display:grid;columns:auto;grid-template-columns:repeat(4,1fr);grid-auto-rows:210px;gap:14px}
+#gal img{height:100%;object-fit:cover;margin:0;display:block}
+#gal img:first-child{grid-column:span 2;grid-row:span 2}
+#gal img:hover{opacity:1;transform:scale(1.015)}
+.btn-line2{border:1px solid var(--leaf);color:var(--leaf);background:transparent}
+.btn-line2:hover{background:var(--leaf);color:#fff}
+.gmore{margin-top:22px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.stp{display:none;gap:18px}
+.stp.on{display:grid;animation:naik .5s cubic-bezier(.2,.7,.2,1)}
+.prog{display:flex;align-items:center;gap:14px;margin-bottom:22px;font-size:13px;color:var(--mute);font-weight:500}
+.prog .bar{flex:1;height:4px;background:var(--line);border-radius:4px;overflow:hidden}
+.prog .bar i{display:block;height:100%;width:33.3%;background:var(--gold);transition:width .5s}
+.snav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:6px}
+.snav .btn{margin-left:auto}
+.bk2{background:none;border:0;font:600 14.5px "Plus Jakarta Sans",sans-serif;color:var(--mute);cursor:pointer;padding:10px 0}
+.bk2:hover{color:var(--leaf)}
+.err{color:#b3261e;font-size:14px;font-weight:500}
+.ring{background:var(--ivory);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14.5px;color:var(--mute);line-height:1.6}
+.ring b{color:var(--leaf)}
+.bk .pic img{aspect-ratio:1}
+.faqw{margin-top:64px}
+.faqw .fq{font-size:30px;text-align:center}
+.faqw .faq{margin-top:20px}
+@media(max-width:960px){#gal{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.film2{padding:100px 0;min-height:auto}}
+@media(max-width:620px){#gal img{display:block!important}.wm b{font-size:18px}.wm i{font-size:8px;letter-spacing:.42em}.wm .lf{width:20px;height:26px}.cue{display:none}.bk .pic{display:none}.faqw{margin-top:44px}}
+@media(prefers-reduced-motion:reduce){.sl img{animation:none}.sl img:first-child{opacity:1}.hero .wrap>*,.stp.on{animation:none}.qs blockquote{transition:none}}
 </style>
 <noscript><style>.rv-in{opacity:1!important;transform:none!important}</style></noscript>
 <!-- Google Analytics 4 -->
@@ -282,21 +349,22 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
 <body>
 <div class="top"><div class="wrap"><span data-t="top1">Selasa – Ahad · 11 pagi – 6 petang</span><span data-t="top2">Kota Damansara · Selayang · Sri Gombak</span></div></div>
 <header><div class="wrap">
-  <a href="#" class="logo" aria-label="Sireh Junjung Banquet Hall"><img src="img/logo.jpg" alt="Logo Sireh Junjung Banquet Hall" width="74" height="60"></a>
-  <nav><a href="#dewan" data-t="n1">Dewan</a><a href="#majlis" data-t="n2">Majlis</a><a href="#galeri" data-t="n3">Galeri</a><a href="#cawangan" data-t="n4">Cawangan</a><a href="#tempah" data-t="n5">Tempah</a></nav>
+  <a href="#" class="wm" aria-label="Sireh Junjung Banquet Hall"><svg class="lf" viewBox="0 0 32 40" aria-hidden="true"><defs><linearGradient id="lfg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8cc63f"/><stop offset="1" stop-color="#2e7d32"/></linearGradient></defs><path d="M16 39C6 30 1 20 3 11 5 4 12 2 16 7c4-5 11-3 13 4 2 9-3 19-13 28z" fill="url(#lfg)"/><path d="M16 37V8M16 15l-6-3M16 21l7-4M16 27l-6-3M16 32l5-3" stroke="#eaf6dc" stroke-width="1" fill="none" opacity=".75"/></svg><span><b>Sireh Junjung</b><i>Banquet Hall</i></span></a>
+  <nav><a href="#dewan" data-t="n1">Dewan</a><a href="#galeri" data-t="n3">Galeri</a><a href="#cawangan" data-t="n4">Cawangan</a><a href="#tempah" data-t="n5">Tempah</a></nav>
   <div class="hd-r"><button class="mnu" id="mnu" aria-label="Menu" aria-expanded="false"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><button class="lang" id="lang" aria-label="Tukar bahasa">EN</button><a href="#tempah" class="btn btn-gold" data-t="cta">Semak tarikh</a></div>
 </div>
-<div class="mnav" id="mnav" hidden><a href="#dewan" data-t="n1">Dewan</a><a href="#majlis" data-t="n2">Majlis</a><a href="#galeri" data-t="n3">Galeri</a><a href="#cawangan" data-t="n4">Cawangan</a><a href="#tempah" data-t="n5">Tempah</a></div></header>
+<div class="mnav" id="mnav" hidden><a href="#dewan" data-t="n1">Dewan</a><a href="#galeri" data-t="n3">Galeri</a><a href="#cawangan" data-t="n4">Cawangan</a><a href="#tempah" data-t="n5">Tempah</a></div></header>
 
-<section class="hero" style="padding:0">
-  <img src="img/hero.jpg" alt="Grand Hall Sireh Junjung berhias bunga putih dengan laluan pengantin" fetchpriority="high" width="1400" height="933">
+<section class="hero film" style="padding:0">
+  <div class="sl"><img src="img/hero.webp" alt="Grand Hall Sireh Junjung berhias bunga putih dengan laluan pengantin" fetchpriority="high" width="1400" height="933"><img src="img/sl/sl03.webp" alt="" loading="lazy" width="1400" height="934"><img src="img/pl1.webp" alt="" loading="lazy" width="1080" height="720"><img src="img/sl/sl04.webp" alt="" loading="lazy" width="1400" height="934"></div>
   <div class="wrap">
     <span class="kick" data-t="h0">Dewan perkahwinan · Lembah Klang</span>
     <h1 data-t="h1">Hari bahagia, <em>di dewan yang memukau.</em></h1>
-    <p data-t="h2">Majlis akad nikah dan persandingan di Kota Damansara (Encorp Strand Mall), Selayang dan Sri Gombak. Dewan, pelamin dan hidangan, semuanya diuruskan di satu tempat.</p>
+    <p data-t="h2">Akad nikah dan persandingan di Kota Damansara, Selayang dan Sri Gombak. Dewan, pelamin dan hidangan diuruskan di satu tempat.</p>
     <div class="cta"><a href="#tempah" class="btn btn-gold" data-t="h3">Semak tarikh kosong</a><a href="#dewan" class="btn btn-line" data-t="h4">Lihat dewan</a></div>
     <div class="rate"><b>4.5 ★</b><span data-t="h5">291 ulasan Google</span></div>
   </div>
+  <a class="cue" href="#dewan" aria-label="Skrol ke bawah"><i></i></a>
 </section>
 
 <div class="stats"><div class="wrap">
@@ -312,8 +380,8 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
   <p class="sub" data-t="d2">Langsungkan akad nikah di Mini Grand Hall, kemudian bersanding di Grand Hall. Kedua-dua dewan terletak di tingkat satu Encorp Strand Mall, dengan tempat letak kereta yang luas dan dewan yang dingin serta selesa.</p>
   <div class="halls">
     <article class="hall rv-in">
-      <div class="ph"><img src="img/gh1.jpg" alt="Grand Hall dengan kerusi putih dan hiasan bunga" loading="lazy" width="1080" height="720"><span class="badge" data-t="g0">Resepsi & persandingan</span></div>
-      <div class="thumbs"><img src="img/t/gh2.jpg" alt="Meja tetamu Grand Hall" loading="lazy" data-g width="760" height="507"><img src="img/t/gh3.jpg" alt="Grand Hall dengan laluan merah" loading="lazy" data-g width="570" height="760"><img src="img/t/fd1.jpg" alt="Hidangan di meja pengantin" loading="lazy" data-g width="570" height="760"></div>
+      <div class="ph"><img src="img/gh1.webp" alt="Grand Hall dengan kerusi putih dan hiasan bunga" loading="lazy" width="1080" height="720"><span class="badge" data-t="g0">Resepsi & persandingan</span></div>
+      <div class="thumbs"><img src="img/t/gh2.webp" alt="Meja tetamu Grand Hall" loading="lazy" data-g width="760" height="507"><img src="img/t/gh3.webp" alt="Grand Hall dengan laluan merah" loading="lazy" data-g width="570" height="760"><img src="img/t/fd1.webp" alt="Hidangan di meja pengantin" loading="lazy" data-g width="570" height="760"></div>
       <div class="bd">
         <h3>Grand Hall</h3>
         <p data-t="g1">Dewan utama berkerusi putih untuk majlis resepsi dan persandingan. Dewan ini dilengkapi siling tinggi, lampu kristal dan laluan pengantin menuju ke pelamin.</p>
@@ -322,8 +390,8 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
       </div>
     </article>
     <article class="hall rv-in">
-      <div class="ph"><img src="img/mh1.jpg" alt="Mini Grand Hall dengan kerusi lut sinar dan pentas" loading="lazy" width="1080" height="720"><span class="badge" data-t="m0">Akad nikah</span></div>
-      <div class="thumbs"><img src="img/t/mh2.jpg" alt="Meja Mini Grand Hall" loading="lazy" data-g width="760" height="507"><img src="img/t/pl1.jpg" alt="Pelamin putih untuk akad nikah" loading="lazy" data-g width="760" height="507"><img src="img/t/mh4.jpg" alt="Pentas Mini Grand Hall" loading="lazy" data-g width="760" height="507"></div>
+      <div class="ph"><img src="img/mh1.webp" alt="Mini Grand Hall dengan kerusi lut sinar dan pentas" loading="lazy" width="1080" height="720"><span class="badge" data-t="m0">Akad nikah</span></div>
+      <div class="thumbs"><img src="img/t/mh2.webp" alt="Meja Mini Grand Hall" loading="lazy" data-g width="760" height="507"><img src="img/t/pl1.webp" alt="Pelamin putih untuk akad nikah" loading="lazy" data-g width="760" height="507"><img src="img/t/mh4.webp" alt="Pentas Mini Grand Hall" loading="lazy" data-g width="760" height="507"></div>
       <div class="bd">
         <h3>Mini Grand Hall</h3>
         <p data-t="m1">Dewan yang lebih kecil dan mesra dengan kerusi lut sinar, sesuai untuk akad nikah, majlis tunang dan majlis keluarga.</p>
@@ -332,49 +400,16 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
       </div>
     </article>
   </div>
+  <div class="evrow rv-in"><span data-t="e0b">Sesuai untuk</span><a href="#tempah" data-ev="Perkahwinan" data-t="e3">Perkahwinan</a><a href="#tempah" data-ev="Akad nikah" data-t="e4">Akad nikah</a><a href="#tempah" data-ev="Tunang" data-t="e5">Tunang</a><a href="#tempah" data-ev="Aqiqah / kesyukuran" data-t="e6">Aqiqah & kesyukuran</a><a href="#tempah" data-ev="Hari jadi" data-t="e7">Hari jadi</a><a href="#tempah" data-ev="Korporat / berbuka puasa" data-t="e8">Korporat & berbuka puasa</a></div>
 </div></section>
 
-<section id="majlis" class="ev-bg"><div class="wrap">
-  <span class="kick" data-t="e0">Majlis</span>
-  <h2 data-t="e1">Setiap majlis <em>diraikan dengan indah.</em></h2>
-  <p class="sub" data-t="e2">Pilih jenis majlis, dan kami akan mencadangkan dewan serta pakej hidangan yang sesuai dengan bilangan tetamu.</p>
-  <div class="events">
-    <a class="evc rv-in" href="#tempah" data-ev="Perkahwinan"><img src="img/t/gh1.jpg" alt="Majlis perkahwinan" loading="lazy" width="760" height="507"><div class="t"><h3 data-t="e3">Perkahwinan</h3><p data-t="e3p">Resepsi dan persandingan di Grand Hall.</p></div></a>
-    <a class="evc rv-in" href="#tempah" data-ev="Akad nikah"><img src="img/t/pl3.jpg" alt="Pelamin akad nikah" loading="lazy" width="760" height="507"><div class="t"><h3 data-t="e4">Akad nikah</h3><p data-t="e4p">Akad nikah yang tenang di Mini Grand Hall.</p></div></a>
-    <a class="evc rv-in" href="#tempah" data-ev="Tunang"><img src="img/t/pl2.jpg" alt="Pelamin bunga untuk majlis tunang" loading="lazy" width="760" height="507"><div class="t"><h3 data-t="e5">Tunang</h3><p data-t="e5p">Pelamin yang anggun untuk kedua-dua belah pihak keluarga.</p></div></a>
-    <a class="evc rv-in" href="#tempah" data-ev="Aqiqah / kesyukuran"><img src="img/t/mh3.jpg" alt="Dewan untuk aqiqah dan kesyukuran" loading="lazy" width="760" height="507"><div class="t"><h3 data-t="e6">Aqiqah & kesyukuran</h3><p data-t="e6p">Raikan bersama keluarga dan sahabat.</p></div></a>
-    <a class="evc rv-in" href="#tempah" data-ev="Hari jadi"><img src="img/t/bday.jpg" alt="Dekorasi majlis hari jadi" loading="lazy" width="760" height="760"><div class="t"><h3 data-t="e7">Hari jadi</h3><p data-t="e7p">Hiasan bertema dan hidangan untuk semua tetamu.</p></div></a>
-    <a class="evc rv-in" href="#tempah" data-ev="Korporat / berbuka puasa"><img src="img/t/buf.jpg" alt="Hidangan bufet untuk majlis korporat dan berbuka puasa" loading="lazy" width="760" height="760"><div class="t"><h3 data-t="e8">Korporat & berbuka puasa</h3><p data-t="e8p">Majlis makan malam syarikat, seminar dan majlis berbuka puasa.</p></div></a>
-  </div>
-</div></section>
 
-<section><div class="wrap why">
-  <div class="pic rv-in"><img src="img/t/pl1.jpg" alt="Pelamin putih Sireh Junjung" loading="lazy" width="760" height="507"><img class="p2" src="img/t/fd2.jpg" alt="Hidangan buah dan lauk di meja pengantin" loading="lazy" width="570" height="760"></div>
-  <div>
-    <span class="kick" data-t="w0">Kenapa Sireh Junjung</span>
-    <h2 data-t="w1">Lebih daripada <em>sekadar dewan.</em></h2>
-    <div class="feat">
-      <div><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></i><div><h4 data-t="f1">Di dalam Encorp Strand Mall</h4><p data-t="f1p">Mudah dicari, dengan tempat letak kereta yang luas dan laluan keluar masuk yang mudah.</p></div></div>
-      <div><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c-3 4-6 6-6 10a6 6 0 0012 0c0-4-3-6-6-10z"/></svg></i><div><h4 data-t="f2">Hidangan yang dipuji tetamu</h4><p data-t="f2p">Ramai tetamu memuji kelazatan hidangan yang disajikan dengan kemas dalam pinggan mangkuk premium.</p></div></div>
-      <div><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l2.4 5 5.6.8-4 3.9.9 5.5L12 14.6 7.1 17.2l.9-5.5-4-3.9 5.6-.8z"/></svg></i><div><h4 data-t="f3">Dekorasi dan pelamin cantik</h4><p data-t="f3p">Dewan yang bersih dan berhias bunga segar, dengan pencahayaan yang cantik untuk gambar kenangan.</p></div></div>
-      <div><i><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8M23 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg></i><div><h4 data-t="f4">Penyelaras majlis yang teliti</h4><p data-t="f4p">Penyelaras majlis berkomunikasi dengan jelas semasa perancangan dan memastikan majlis berjalan lancar pada hari yang ditetapkan.</p></div></div>
-    </div>
-  </div>
-</div></section>
 
-<section class="rev-bg"><div class="wrap">
+<section class="film2" aria-label="Ulasan Google"><img class="px" src="img/pel2.webp" alt="" loading="lazy" width="960" height="641"><div class="wrap">
   <span class="kick" data-t="r0">Ulasan Google</span>
-  <h2 data-t="r1">Kenangan yang <em>dikongsi.</em></h2>
-  <p class="sub" data-t="r2">Petikan ulasan sebenar daripada pengantin dan tetamu di Google.</p>
-  <div class="revs">
-    <div class="rv rv-in"><span class="st">★★★★★</span><q>My family memang tak pernah regret pilih hall ni. The nikah hall is super cantik, and the sanding hall is even more beautiful. Still remember masa bulan 1 datang first time nak tengok hall, my mum literally fall in love at first sight…</q><span class="who"><b>Darwisyah Haliquzaman</b>Pengantin</span></div>
-    <div class="rv rv-in"><span class="st">★★★★★</span><q>We just had our wedding here, and everything exceeded our expectations! The hall was beautiful, clean, and decorated perfectly! The food was absolutely delicious, even our guests kept complimenting it…</q><span class="who"><b>Hanis Fazli</b>Pengantin</span></div>
-    <div class="rv rv-in"><span class="st">★★★★★</span><q>Everything was perfect. From the delicious foods, the nice deco hall, the full blast aircond, the event flow, staffs, photographer, affordable price, everything turned out perfect!</q><span class="who"><b>Ainul Husna</b>Pengantin</span></div>
-    <div class="rv rv-in"><span class="st">★★★★★</span><q>They were very communicative during the planning of the wedding and made sure the wedding on the day itself went smoothly. My guests all complimented on the food…</q><span class="who"><b>Muhammad Amer</b>Resepsi perkahwinan</span></div>
-    <div class="rv rv-in"><span class="st">★★★★★</span><q>Tqvm for excellent service and delicious food. My granddaughter's birthday party was wonderful and all the guests enjoyed themselves. Special thanks to Yana, Zara, Ain and the Chef.</q><span class="who"><b>Faizah Embong</b>Majlis hari jadi</span></div>
-    <div class="rv rv-in"><span class="st">★★★★★</span><q>Ample parking space as it is located inside Strand Mall Damansara. The hall is big enough to hold large crowd and the aircond is good enough to accommodate large crowd too.</q><span class="who"><b>Mh Aj</b>Tetamu</span></div>
-  </div>
-  <div class="gbadge"><b>4.5</b><div><span class="st" style="color:var(--gold2);letter-spacing:3px">★★★★★</span><br><span data-t="r3">291 ulasan di Google Maps</span></div><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Sireh+Junjung+Banquet+Hall+Encorp+Strand+Mall" target="_blank" rel="noopener" data-t="r4">Baca semua ulasan</a></div>
+  <div class="qs" id="qs"><blockquote class="on"><q>We just had our wedding here, and everything exceeded our expectations! The hall was beautiful, clean, and decorated perfectly! The food was absolutely delicious, even our guests kept complimenting it…</q><cite><b>Hanis Fazli</b> · Pengantin</cite></blockquote><blockquote><q>Everything was perfect. From the delicious foods, the nice deco hall, the full blast aircond, the event flow, staffs, photographer, affordable price, everything turned out perfect!</q><cite><b>Ainul Husna</b> · Pengantin</cite></blockquote><blockquote><q>My family memang tak pernah regret pilih hall ni. The nikah hall is super cantik, and the sanding hall is even more beautiful…</q><cite><b>Darwisyah Haliquzaman</b> · Pengantin</cite></blockquote><blockquote><q>They were very communicative during the planning of the wedding and made sure the wedding on the day itself went smoothly. My guests all complimented on the food…</q><cite><b>Muhammad Amer</b> · Resepsi perkahwinan</cite></blockquote></div>
+  <div class="qd" id="qd"><button aria-label="Ulasan 1" class=on></button><button aria-label="Ulasan 2"></button><button aria-label="Ulasan 3"></button><button aria-label="Ulasan 4"></button></div>
+  <div class="gb2"><b>4.5 ★</b><span data-t="r3">291 ulasan di Google Maps</span><a href="https://www.google.com/maps/search/?api=1&query=Sireh+Junjung+Banquet+Hall+Encorp+Strand+Mall" target="_blank" rel="noopener" data-t="r4">Baca semua ulasan</a></div>
 </div></section>
 
 <section id="galeri"><div class="wrap">
@@ -382,7 +417,7 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
   <h2 data-t="ga1">Majlis di <em>Sireh Junjung.</em></h2>
   <div class="tabs"><button class="on" data-tab="kd">Kota Damansara</button><button data-tab="bc">Selayang</button><button data-tab="sg">Sri Gombak</button></div>
   <div class="gal" id="gal"></div>
-  <button class="btn btn-leaf gmore" id="gmore" data-t="gm">Lihat semua gambar</button>
+  <button class="btn btn-line2 gmore" id="gmore"><span data-t="gm">Lihat semua gambar</span> (<b></b>)</button>
 </div></section>
 
 <section id="cawangan" class="br-bg"><div class="wrap">
@@ -390,17 +425,17 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
   <h2 data-t="c1">Tiga cawangan, <em>satu nama dipercayai.</em></h2>
   <p class="sub" data-t="c2">Setiap cawangan mempunyai admin tersendiri untuk pertanyaan. Setiap mesej terus sampai kepada admin cawangan yang berkenaan.</p>
   <div class="brs">
-    <div class="brc rv-in"><div class="ph"><img src="img/t/mall.jpg" alt="Encorp Strand Mall Kota Damansara" loading="lazy" width="760" height="570"><span class="n">Encorp Strand Mall</span></div><div class="bd">
+    <div class="brc rv-in"><div class="ph"><img src="img/t/mall.webp" alt="Encorp Strand Mall Kota Damansara" loading="lazy" width="760" height="570"><span class="n">Encorp Strand Mall</span></div><div class="bd">
       <h3><a href="/kota-damansara/">Kota Damansara</a></h3><p class="ad">F55, Jalan PJU 5/20e, Encorp Strand Mall, Kota Damansara, 47810 Petaling Jaya, Selangor</p>
       <div class="pic"><span data-t="pg">Admin:</span> <b>Dewi · 018-397 5072</b></div>
       <div class="acts"><a class="w" href="https://wa.me/60183975072?text=Salam%2C%20saya%20nak%20tanya%20tentang%20dewan%20Sireh%20Junjung%20Kota%20Damansara." target="_blank" rel="noopener">WhatsApp Dewi</a><a class="tl" href="tel:+60183975072" data-t="call">Telefon</a><a href="https://waze.com/ul?q=Sireh%20Junjung%20Banquet%20Hall%20Encorp%20Strand%20Mall&navigate=yes" target="_blank" rel="noopener">Waze</a><a href="https://www.google.com/maps/search/?api=1&query=Sireh+Junjung+Banquet+Hall+Encorp+Strand+Mall" target="_blank" rel="noopener">Maps</a><a href="/kota-damansara/">Halaman cawangan →</a></div>
     </div></div>
-    <div class="brc rv-in"><div class="ph"><img src="img/sl/t/sl01.jpg" alt="Pelamin di cawangan Selayang" loading="lazy" width="760" height="507"><span class="n">Medan Selayang</span></div><div class="bd">
+    <div class="brc rv-in"><div class="ph"><img src="img/sl/t/sl01.webp" alt="Pelamin di cawangan Selayang" loading="lazy" width="760" height="507"><span class="n">Medan Selayang</span></div><div class="bd">
       <h3><a href="/selayang/">Selayang</a></h3><p class="ad">B13 G, Jalan Medan Selayang 1, Kawasan Industri Batu Caves, 68100 Batu Caves, Selangor</p>
       <div class="pic"><span data-t="pg">Admin:</span> <b>Danial · 011-2182 0084</b></div>
       <div class="acts"><a class="w" href="https://wa.me/601121820084?text=Salam%2C%20saya%20nak%20tanya%20tentang%20dewan%20Sireh%20Junjung%20Selayang." target="_blank" rel="noopener">WhatsApp Danial</a><a class="tl" href="tel:+601121820084" data-t="call">Telefon</a><a href="https://waze.com/ul?q=Sireh%20Junjung%20Banquet%20Hall%20Batu%20Caves&navigate=yes" target="_blank" rel="noopener">Waze</a><a href="https://www.google.com/maps/search/?api=1&query=Sireh+Junjung+Banquet+Hall+Batu+Caves" target="_blank" rel="noopener">Maps</a><a href="/selayang/">Halaman cawangan →</a></div>
     </div></div>
-    <div class="brc rv-in"><div class="ph"><img src="img/sg/t/sg05.jpg" alt="Dewan Sireh Junjung Sri Gombak dengan pelamin dan kerusi rotan" loading="lazy" width="760" height="428"><span class="n">Taman Sri Gombak</span></div><div class="bd">
+    <div class="brc rv-in"><div class="ph"><img src="img/sg/t/sg05.webp" alt="Dewan Sireh Junjung Sri Gombak dengan pelamin dan kerusi rotan" loading="lazy" width="760" height="428"><span class="n">Taman Sri Gombak</span></div><div class="bd">
       <h3><a href="/sri-gombak/">Sri Gombak</a></h3><p class="ad">13, Jalan SG 8/7, Taman Sri Gombak, 68100 Batu Caves, Selangor</p>
       <div class="pic"><span data-t="pg">Admin:</span> <b>Nabila · 017-672 0252</b></div>
       <div class="acts"><a class="w" href="https://wa.me/60176720252?text=Salam%2C%20saya%20nak%20tanya%20tentang%20dewan%20Sireh%20Junjung%20Sri%20Gombak." target="_blank" rel="noopener">WhatsApp Nabila</a><a class="tl" href="tel:+60176720252" data-t="call">Telefon</a><a href="https://waze.com/ul?q=13%20Jalan%20SG%208%2F7%20Taman%20Sri%20Gombak&navigate=yes" target="_blank" rel="noopener">Waze</a><a href="https://www.google.com/maps/search/?api=1&query=13+Jalan+SG+8%2F7+Taman+Sri+Gombak+Batu+Caves" target="_blank" rel="noopener">Maps</a><a href="/sri-gombak/">Halaman cawangan →</a></div>
@@ -410,13 +445,14 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
 </div></section>
 
 <section id="tempah"><div class="wrap bk">
-  <div class="pic rv-in"><img src="img/couple.jpg" alt="Pasangan pengantin di pelamin Sireh Junjung" loading="lazy" width="828" height="837"></div>
+  <div class="pic rv-in"><img src="img/couple.webp" alt="Pasangan pengantin di pelamin Sireh Junjung" loading="lazy" width="828" height="837"></div>
   <div>
     <span class="kick" data-t="t0">Semak tarikh</span>
     <h2 data-t="t1">Rancang <em>majlis impian.</em></h2>
-    <p class="sub" data-t="t2">Isi borang ringkas ini. Mesej akan disediakan secara automatik dan dihantar terus ke WhatsApp admin cawangan yang dipilih.</p>
-    <form id="bf" style="margin-top:26px">
-      <div class="fl"><span data-t="l1">Jenis majlis</span><div class="chips" id="evChips">
+    <p class="sub" data-t="t2">Tiga langkah ringkas. Mesej disediakan secara automatik dan dihantar terus ke WhatsApp admin cawangan pilihan.</p>
+    <form id="bf" style="margin-top:22px" novalidate>
+      <div class="prog"><div class="bar"><i id="pbar"></i></div><span id="stpT">Langkah 1 daripada 3</span></div>
+      <fieldset class="stp on" data-s="1"><div class="fl"><span data-t="l1">Jenis majlis</span><div class="chips" id="evChips">
         <label><input type="radio" name="ev" value="Perkahwinan" checked><span data-t="o1">Perkahwinan</span></label>
         <label><input type="radio" name="ev" value="Akad nikah"><span data-t="o2">Akad nikah</span></label>
         <label><input type="radio" name="ev" value="Tunang"><span data-t="o3">Tunang</span></label>
@@ -424,7 +460,8 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
         <label><input type="radio" name="ev" value="Hari jadi"><span data-t="o5">Hari jadi</span></label>
         <label><input type="radio" name="ev" value="Korporat / berbuka puasa"><span data-t="o6">Korporat / berbuka puasa</span></label>
       </div></div>
-      <div class="fl"><span data-t="l2">Cawangan</span><div class="chips">
+      <div class="snav"><button type="button" class="btn btn-leaf" data-go="2"><span data-t="nx">Seterusnya</span> →</button></div></fieldset>
+      <fieldset class="stp" data-s="2"><div class="fl"><span data-t="l2">Cawangan</span><div class="chips">
         <label><input type="radio" name="br" value="kd" checked><span>Kota Damansara</span></label>
         <label><input type="radio" name="br" value="bc"><span>Selayang</span></label>
         <label><input type="radio" name="br" value="sg"><span>Sri Gombak</span></label>
@@ -439,16 +476,15 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
         <label class="fl"><span data-t="l5">Anggaran bilangan tetamu</span><select name="pax"><option value="Kurang daripada 120">Kurang daripada 120</option><option selected>120 - 200</option><option>200 - 320</option><option value="Lebih daripada 320">Lebih daripada 320</option></select></label>
       </div>
       <p class="paxw" id="paxw" hidden data-t="pw">Mini Grand Hall memuatkan sehingga 120 tetamu. Bagi majlis yang melebihi 120 tetamu, Grand Hall lebih sesuai.</p>
-      <label class="fl"><span data-t="l6">Nama</span><input type="text" name="nm" placeholder="Contoh: Nurul Aina" required></label>
+      <p class="err" id="dterr" hidden data-t="de">Sila pilih tarikh majlis.</p><div class="snav"><button type="button" class="bk2" data-go="1">← <span data-t="bk">Kembali</span></button><button type="button" class="btn btn-leaf" data-go="3"><span data-t="nx">Seterusnya</span> →</button></div></fieldset>
+      <fieldset class="stp" data-s="3"><p class="ring" id="ring"></p><label class="fl"><span data-t="l6">Nama</span><input type="text" name="nm" placeholder="Contoh: Nurul Aina" required></label>
       <button class="btn btn-wa" type="submit"><svg class="i" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.2-.7-2.7-1.1-4.4-3.8-4.5-4-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.1z"/></svg><span data-t="sb">Hantar ke WhatsApp</span></button>
       <p class="note" id="toWho">Dihantar kepada Dewi, Kota Damansara</p>
+    <p class="err" id="nmerr" hidden data-t="ne">Sila isi nama.</p><div class="snav"><button type="button" class="bk2" data-go="2">← <span data-t="bk">Kembali</span></button></div></fieldset>
     </form>
   </div>
-</div></section>
-
-<section class="ev-bg"><div class="wrap">
-  <div style="text-align:center"><span class="kick" data-t="q0">Soalan lazim</span><h2 style="margin-top:10px" data-t="q1">Sebelum <em>menempah.</em></h2></div>
-  <div class="faq">
+</div>
+<div class="wrap faqw"><h3 class="fq" data-t="q1b">Soalan lazim</h3><div class="faq">
     <details><summary data-t="q2">Bolehkah saya melihat dewan terlebih dahulu?</summary><p data-t="q2a">Boleh. Hubungi admin cawangan pilihan melalui WhatsApp untuk menetapkan masa lawatan. Pejabat dibuka dari Selasa hingga Ahad, pukul 11 pagi hingga 6 petang.</p></details>
     <details><summary data-t="q3">Berapa kapasiti dewan di Kota Damansara?</summary><p data-t="q3a">Grand Hall memuatkan 320 tetamu (40 meja). Mini Grand Hall pula memuatkan 120 tetamu (15 meja) dan sesuai untuk majlis akad nikah.</p></details>
     <details><summary data-t="q4">Adakah pakej yang merangkumi hidangan dan pelamin?</summary><p data-t="q4a">Ada. Maklumkan jenis majlis, tarikh dan bilangan tetamu, dan admin kami akan mencadangkan pakej yang sesuai.</p></details>
@@ -457,17 +493,15 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
   </div>
 </div></section>
 
-<section class="band"><img src="img/t/gh3.jpg" alt="" loading="lazy" width="570" height="760"><div class="wrap">
-  <h2 data-t="b1">Tarikh idaman <em style="color:var(--gold2)">masih kosong?</em></h2>
-  <p data-t="b2">Semak lebih awal supaya mudah mendapat tarikh pilihan. Admin kami akan membalas di WhatsApp secepat mungkin.</p>
-  <a href="#tempah" class="btn btn-gold" data-t="b3">Semak tarikh sekarang</a>
-</div></section>
+
+
+
 
 <footer><div class="wrap">
   <div class="g">
-    <div><span class="lg"><img src="img/logo.jpg" alt="Sireh Junjung Banquet Hall" loading="lazy" width="640" height="434"></span><p style="margin-top:16px;max-width:300px" data-t="ft">Dewan perkahwinan dan majlis di Kota Damansara, Selayang dan Sri Gombak.</p></div>
+    <div><span class="lg"><img src="img/logo-krim.png" alt="Sireh Junjung Banquet Hall" loading="lazy" width="640" height="434"></span><p style="margin-top:16px;max-width:300px" data-t="ft">Dewan perkahwinan dan majlis di Kota Damansara, Selayang dan Sri Gombak.</p></div>
     <div><h4 data-t="fc">Cawangan</h4><ul><li><a href="/kota-damansara/">Kota Damansara</a> · Dewi<br><a href="https://wa.me/60183975072" target="_blank" rel="noopener">018-397 5072</a></li><li><a href="/selayang/">Selayang</a> · Danial<br><a href="https://wa.me/601121820084" target="_blank" rel="noopener">011-2182 0084</a></li><li><a href="/sri-gombak/">Sri Gombak</a> · Nabila<br><a href="https://wa.me/60176720252" target="_blank" rel="noopener">017-672 0252</a></li></ul></div>
-    <div><h4 data-t="fl2">Pautan</h4><ul><li><a href="#dewan" data-t="n1">Dewan</a></li><li><a href="#majlis" data-t="n2">Majlis</a></li><li><a href="#galeri" data-t="n3">Galeri</a></li><li><a href="#tempah" data-t="n5">Tempah</a></li></ul></div>
+    <div><h4 data-t="fl2">Pautan</h4><ul><li><a href="#dewan" data-t="n1">Dewan</a></li><li></li><li><a href="#galeri" data-t="n3">Galeri</a></li><li><a href="#tempah" data-t="n5">Tempah</a></li></ul></div>
     <div><h4 data-t="fo">Pejabat</h4><ul><li data-t="fo1">Selasa – Ahad, 11 pagi – 6 petang</li><li data-t="fo2">Isnin: ditutup</li><li>WhatsApp: <a href="https://wa.me/601162186678" target="_blank" rel="noopener">011-6218 6678</a></li></ul></div>
   </div>
   <div class="cp"><span>© 2026 Dstrand Banquet Hall Sdn Bhd · Sireh Junjung Banquet Hall</span><span><span data-t="pv">Maklumat yang diisi hanya digunakan untuk membalas pertanyaan.</span> <a href="privasi.html">Notis Privasi</a></span><span>Website oleh <a href="https://hasfiwebdesign.github.io/portfolio/" target="_blank" rel="noopener">Hasfi Web Design</a></span></div>
@@ -481,14 +515,16 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
 <script>
 const BR={kd:{n:'Dewi',p:'60183975072',c:'Kota Damansara'},bc:{n:'Danial',p:'601121820084',c:'Selayang'},sg:{n:'Nabila',p:'60176720252',c:'Sri Gombak'}};
 const G={kd:['hero','mh1','pl1','gh2','pl2','fd1','gh3','mh2','pl3','kd16','arch','pel2','couple','cake','gh4','mh4','corp','bday'],bc:['sl/sl01','sl/sl03','sl/sl04','sl/sl05','sl/sl02','sl/sl06','sl/sl07','sl/sl08','sl/sl10','sl/sl12','sl/sl16','sl/sl14'],sg:['sg/sg05','sg/sg04','sg/sg01','sg/sg02','sg/sg03']};
-const gal=document.getElementById('gal');let cur=[],ci=0;
-function show(t){gal.classList.remove('all');cur=G[t].map(x=>'img/'+x+'.jpg');gal.innerHTML=G[t].map((x,i)=>'<img src="img/'+x.replace(/([^/]+)$/,'t/$1')+'.jpg" loading="lazy" alt="Majlis di Sireh Junjung '+(t=='kd'?'Kota Damansara':'Selayang')+', gambar '+(i+1)+'" data-i="'+i+'">').join('');}
+const gal=document.getElementById('gal'),gm=document.getElementById('gmore');let cur=[],ci=0;
+const CN={kd:'Kota Damansara',bc:'Selayang',sg:'Sri Gombak'};
+function show(t){gal.innerHTML=G[t].slice(0,9).map((x,i)=>'<img src="img/'+x.replace(/([^/]+)$/,'t/$1')+'.webp" loading="lazy" alt="Majlis di Sireh Junjung '+CN[t]+', gambar '+(i+1)+'" data-i="'+i+'">').join('');gal.className='gal g'+Math.min(G[t].length,9);gm.hidden=G[t].length<=9;gm.querySelector('b').textContent=G[t].length}
 show('kd');
-document.getElementById('gmore').onclick=()=>gal.classList.add('all');
+gm.onclick=()=>{const t=document.querySelector('.tabs .on').dataset.tab;op(G[t].map(x=>'img/'+x+'.webp'),9)};
+
 document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');show(b.dataset.tab)});
 const lb=document.getElementById('lbx'),li=lb.querySelector('img');
 function op(list,i){cur=list;ci=i;li.src=cur[ci];lb.classList.add('on')}
-gal.onclick=e=>{if(e.target.dataset.i){const t=document.querySelector('.tabs .on').dataset.tab;op(G[t].map(x=>'img/'+x+'.jpg'),+e.target.dataset.i)}};
+gal.onclick=e=>{if(e.target.dataset.i){const t=document.querySelector('.tabs .on').dataset.tab;op(G[t].map(x=>'img/'+x+'.webp'),+e.target.dataset.i)}};
 document.querySelectorAll('[data-g]').forEach(im=>im.onclick=()=>{const l=[...im.parentNode.querySelectorAll('img')].map(x=>x.src.replace('/t/','/'));op(l,l.indexOf(im.src.replace('/t/','/')))});
 lb.querySelector('.x').onclick=()=>lb.classList.remove('on');
 lb.querySelector('.nx').onclick=()=>{ci=(ci+1)%cur.length;li.src=cur[ci]};
@@ -501,17 +537,35 @@ const f=document.getElementById('bf'),hr=document.getElementById('hallRow'),tw=d
 const PX={kd:['Kurang daripada 120','120 - 200','200 - 320','Lebih daripada 320'],bc:['Kurang daripada 100','100 - 184','Lebih daripada 184'],sg:['Kurang daripada 30','30 - 60','Lebih daripada 60']};let pb='kd';
 function upd(){const b=f.br.value;if(b!==pb){pb=b;f.pax.innerHTML=PX[b].map((x,i)=>'<option'+(i==1?' selected':'')+'>'+x+'</option>').join('')}hr.hidden=b!=='kd';document.getElementById('paxw').hidden=!(b==='kd'&&f.hall.value.startsWith('Mini')&&f.pax.value!=='Kurang daripada 120');tw.textContent=(EN?'Sent to ':'Dihantar kepada ')+BR[b].n+', '+BR[b].c}
 f.querySelectorAll('input[name=br],input[name=hall]').forEach(r=>r.onchange=upd);f.pax.onchange=upd;
-document.querySelectorAll('[data-hall]').forEach(a=>a.addEventListener('click',()=>{f.br.value='kd';upd();f.querySelectorAll('input[name=hall]').forEach(r=>r.checked=r.value.startsWith(a.dataset.hall+' '))}));
-document.querySelectorAll('[data-ev]').forEach(a=>a.addEventListener('click',()=>{f.querySelectorAll('input[name=ev]').forEach(r=>r.checked=r.value===a.dataset.ev)}));
+let stp=1;const stT=document.getElementById('stpT'),pbar=document.getElementById('pbar'),ring=document.getElementById('ring');
+function tkh(){return f.dt.value?new Date(f.dt.value+'T00:00').toLocaleDateString(EN?'en-GB':'ms-MY',{weekday:'long',day:'numeric',month:'long',year:'numeric'}):'-'}
+function stTxt(){stT.textContent=EN?'Step '+stp+' of 3':'Langkah '+stp+' daripada 3';pbar.style.width=(stp/3*100)+'%'}
+function go(n,fokus){if(n===3&&stp===2&&!f.dt.value){document.getElementById('dterr').hidden=false;f.dt.focus();return}
+ document.getElementById('dterr').hidden=true;stp=n;f.querySelectorAll('.stp').forEach(x=>x.classList.toggle('on',+x.dataset.s===n));stTxt();
+ if(n===3){const b=BR[f.br.value];ring.innerHTML='<b>'+f.ev.value+'</b> · '+b.c+(f.br.value==='kd'?' · '+f.hall.value.replace(/ \(.*\)/,''):'')+'<br>'+tkh()+' · '+f.pax.value+(EN?' guests':' tetamu');setTimeout(()=>f.nm.focus({preventScroll:true}),50)}
+ if(fokus!==false){const r=f.getBoundingClientRect();if(r.top<70||r.top>innerHeight*.6)scrollTo({top:scrollY+r.top-110,behavior:'smooth'})}}
+f.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(+b.dataset.go));
+f.querySelectorAll('input[name=ev]').forEach(r=>r.addEventListener('click',()=>setTimeout(()=>go(2),260)));
+f.dt.onchange=()=>{document.getElementById('dterr').hidden=true};
+document.querySelectorAll('[data-hall]').forEach(a=>a.addEventListener('click',()=>{f.br.value='kd';upd();f.querySelectorAll('input[name=hall]').forEach(r=>r.checked=r.value.startsWith(a.dataset.hall+' '));go(2,false)}));
+document.querySelectorAll('[data-ev]').forEach(a=>a.addEventListener('click',()=>{f.querySelectorAll('input[name=ev]').forEach(r=>r.checked=r.value===a.dataset.ev);go(2,false)}));
 const dt=f.dt;const t=new Date();t.setDate(t.getDate()+1);dt.min=t.toISOString().slice(0,10);
-f.onsubmit=e=>{e.preventDefault();const b=BR[f.br.value];const d=f.dt.value?new Date(f.dt.value).toLocaleDateString('ms-MY',{weekday:'long',day:'numeric',month:'long',year:'numeric'}):'-';
+f.onsubmit=e=>{e.preventDefault();if(stp!==3){go(stp+1);return}if(!f.nm.value.trim()){document.getElementById('nmerr').hidden=false;f.nm.focus();return}document.getElementById('nmerr').hidden=true;const b=BR[f.br.value];const d=f.dt.value?new Date(f.dt.value+'T00:00').toLocaleDateString('ms-MY',{weekday:'long',day:'numeric',month:'long',year:'numeric'}):'-';
 const m='Salam '+b.n+', saya '+f.nm.value.trim()+'.\nSaya ingin menyemak tarikh di Sireh Junjung '+b.c+':\n\n• Majlis: '+f.ev.value+(f.br.value==='kd'?'\n• Dewan: '+f.hall.value:'')+'\n• Tarikh: '+d+'\n• Anggaran bilangan tetamu: '+f.pax.value+'\n\nAdakah slot pada tarikh ini masih kosong?';
 window.open('https://wa.me/'+b.p+'?text='+encodeURIComponent(m),'_blank')};
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('section:not(.hero) .kick,section h2,section .sub').forEach(el=>el.classList.add('rv-in'));
 document.querySelectorAll('.rv-in').forEach(el=>io.observe(el));
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+(()=>{const q=[...document.querySelectorAll('#qs blockquote')],d=[...document.querySelectorAll('#qd button')];let k=0,tm;
+ const pi=n=>{k=n;q.forEach((x,i)=>x.classList.toggle('on',i===k));d.forEach((x,i)=>x.classList.toggle('on',i===k))};
+ const run=()=>{clearInterval(tm);if(!RM)tm=setInterval(()=>pi((k+1)%q.length),6500)};d.forEach((b,i)=>b.onclick=()=>{pi(i);run()});run()})();
+(()=>{const im=document.querySelector('.film2 .px');if(!im||RM)return;let t=0;
+ const f2=()=>{t=0;const r=im.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;im.style.transform='translate3d(0,'+((r.top+r.height/2-innerHeight/2)*-0.12).toFixed(1)+'px,0)'};
+ addEventListener('scroll',()=>{if(!t){t=1;requestAnimationFrame(f2)}},{passive:true});f2()})();
 /* EN */
 const T={top1:'Tuesday – Sunday · 11am – 6pm',top2:'Kota Damansara · Selayang · Sri Gombak',n1:'Halls',n2:'Events',n3:'Gallery',n4:'Branches',n5:'Book',cta:'Check dates',
-h0:'Wedding venue · Klang Valley',h1:'Your happiest day, <em>in a hall to remember.</em>',h2:'Weddings, solemnisation and receptions at Encorp Strand Mall Kota Damansara, Selayang and Sri Gombak. Hall, dais and catering, all arranged in one place.',h3:'Check available dates',h4:'View halls',h5:'291 Google reviews',
+h0:'Wedding venue · Klang Valley',h1:'Your happiest day, <em>in a hall to remember.</em>',h2:'Akad nikah and receptions in Kota Damansara, Selayang and Sri Gombak. Hall, dais and catering, all arranged in one place.',h3:'Check available dates',h4:'View halls',h5:'291 Google reviews',
 s1:'guests in the Grand Hall',s2:'guests in the Mini Grand Hall',s3:'branches in the Klang Valley',s4:'291 Google reviews',
 d0:'Our halls · Kota Damansara',d1:'Two halls, <em>one perfect day.</em>',d2:'Hold your akad nikah in the Mini Grand Hall, then celebrate your reception in the Grand Hall. Both halls are on the first floor of Encorp Strand Mall, with ample parking and cool, comfortable interiors.',
 g0:'Reception & bersanding',g1:'Our main hall, set with white chairs for receptions and bersanding. It features high ceilings, crystal chandeliers and a bridal aisle leading to the dais.',sp1:'seated guests',sp2:'tables',sp3b:'White',sp3:'chairs',g2:'Book the Grand Hall',
@@ -521,13 +575,13 @@ e3:'Wedding',e3p:'Reception and bersanding in the Grand Hall.',e4:'Akad nikah',e
 w0:'Why Sireh Junjung',w1:'More than <em>just a hall.</em>',f1:'Inside Encorp Strand Mall',f1p:'Easy to find, with ample parking and easy access in and out.',f2:'Food guests rave about',f2p:'Guests love the food, neatly served on premium tableware.',f3:'Beautiful decor and dais',f3p:'Clean halls, fresh flowers and lighting made for photos.',f4:'Attentive event coordinators',f4p:'Our coordinators communicate clearly while planning and make sure the event runs smoothly on the day.',
 r0:'Google reviews',r1:'Memories <em>our couples share.</em>',r2:'Genuine excerpts from Google reviews by our couples and guests.',r3:'291 reviews on Google Maps',r4:'Read all reviews',
 ga0:'Gallery',ga1:'Celebrations at <em>Sireh Junjung.</em>',c0:'Branches',c1:'Three branches, <em>one trusted name.</em>',c2:'Each branch has its own admin for enquiries. Your message goes straight to the right branch admin.',pg:'Admin:',call:'Call',menu:'Menu',hr:'Office hours: Tuesday – Sunday, 11am – 6pm. Closed on Mondays.',
-t0:'Check dates',t1:'Plan <em>your event.</em>',t2:'Fill in this short form. We draft the message for you and send it straight to your chosen branch admin on WhatsApp.',l1:'Event type',l2:'Branch',l3:'Hall',l4:'Event date',l5:'Estimated number of guests',l6:'Your name',
+t0:'Check dates',t1:'Plan <em>your event.</em>',t2:'Three quick steps. We draft the message for you and send it straight to your chosen branch admin on WhatsApp.',e0b:'Ideal for',nx:'Next',bk:'Back',de:'Please choose your event date.',ne:'Please enter your name.',q1b:'Frequently asked questions',l1:'Event type',l2:'Branch',l3:'Hall',l4:'Event date',l5:'Estimated number of guests',l6:'Your name',
 o1:'Wedding',o2:'Akad nikah',o3:'Engagement',o4:'Aqiqah / thanksgiving',o5:'Birthday',o6:'Corporate / iftar',o7:'Not sure yet',pw:'The Mini Grand Hall seats 120 guests. For more than 120 guests, the Grand Hall is a better fit.',gm:'View all photos',sb:'Send to WhatsApp',
 q0:'FAQ',q1:'Before you <em>book.</em>',q2:'Can we view the hall first?',q2a:'Yes. WhatsApp your branch admin to arrange a visit. The office is open Tuesday to Sunday, 11am to 6pm.',q3:'How many guests can the Kota Damansara halls hold?',q3a:'The Grand Hall seats 320 guests (40 tables). The Mini Grand Hall seats 120 guests (15 tables), ideal for akad nikah.',q4:'Do you offer packages that include catering and a dais?',q4a:'Yes. Tell us your event, date and guest count and our admin will suggest a suitable package.',q5:'Where can guests park?',q5a:'Kota Damansara is on the first floor of Encorp Strand Mall with ample mall parking. Selayang has parking right in front of the hall.',q6:'How do I check if a date is available?',q6a:'Fill in the Check Dates form above. It goes straight to the branch admin on WhatsApp, who will confirm the slot as soon as possible.',
 b1:'Is your dream date <em style="color:var(--gold2)">still open?</em>',b2:'Check early to secure your preferred date. Our admin replies on WhatsApp as soon as possible.',b3:'Check dates now',ft:'Wedding and event halls in Kota Damansara, Selayang and Sri Gombak.',fc:'Branches',fl2:'Links',fo:'Office',fo1:'Tuesday – Sunday, 11am – 6pm',fo2:'Closed on Mondays',pv:'The information you submit is used only to reply to your enquiry.'};
 const BM={};document.querySelectorAll('[data-t]').forEach(el=>{BM[el.dataset.t]=BM[el.dataset.t]||el.innerHTML});
 let EN=false;const lg=document.getElementById('lang');
-function setL(en){EN=en;document.documentElement.lang=en?'en':'ms';lg.textContent=en?'BM':'EN';document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;el.innerHTML=en?(T[k]||BM[k]):BM[k]});upd();try{localStorage.setItem('sjl',en?'en':'ms')}catch(e){}}
+function setL(en){EN=en;document.documentElement.lang=en?'en':'ms';lg.textContent=en?'BM':'EN';document.querySelectorAll('[data-t]').forEach(el=>{const k=el.dataset.t;el.innerHTML=en?(T[k]||BM[k]):BM[k]});upd();stTxt();try{localStorage.setItem('sjl',en?'en':'ms')}catch(e){}}
 lg.onclick=()=>setL(!EN);
 try{if(localStorage.getItem('sjl')==='en')setL(true)}catch(e){}
 upd();

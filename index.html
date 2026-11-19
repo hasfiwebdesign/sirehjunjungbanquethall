@@ -273,6 +273,11 @@ body{font-size:16px;letter-spacing:-.003em}
 @media(prefers-reduced-motion:reduce){.rv-in{opacity:1!important;transform:none!important;transition:none!important}}
 </style>
 <noscript><style>.rv-in{opacity:1!important;transform:none!important}</style></noscript>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZQL44YHQE"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4ZQL44YHQE');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('wa.me')>-1)gtag('event','klik_whatsapp',{link_url:h.split('?')[0]});else if(h.indexOf('tel:')===0)gtag('event','klik_telefon',{link_url:h});else if(/waze|google\.com\/maps/.test(h))gtag('event','klik_arah',{link_url:h.split('?')[0]})},true);
+document.addEventListener('submit',function(e){gtag('event','generate_lead',{form_id:(e.target&&e.target.id)||'borang'})},true);</script>
 </head>
 <body>
 <div class="top"><div class="wrap"><span data-t="top1">Selasa – Ahad · 11 pagi – 6 petang</span><span data-t="top2">Kota Damansara · Selayang · Sri Gombak</span></div></div>

@@ -22,7 +22,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-variant-numeric:lining-nums;font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 .serif{font-family:"Cormorant Garamond",Georgia,serif}
@@ -265,10 +265,13 @@ footer .cp{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top
  .mbar a{padding:13px;border-radius:12px;text-align:center;font-weight:600;font-size:15px}
  footer{padding-bottom:110px}
 }
+.lg img,.logo img{width:auto}
 /* tipografi v2 */
 [style*="Cormorant"],h1,h2,h3,.kick+h2 em,h2 em,h1 em{font-weight:600}
 body{font-size:16px;letter-spacing:-.003em}
 @media(max-width:640px){h2{font-size:clamp(36px,9.4vw,44px)}h3{font-size:30px}}
+
+@media(prefers-reduced-motion:reduce){.rv-in{opacity:1!important;transform:none!important;transition:none!important}}
 
 .brnav{background:#fff;border-bottom:1px solid var(--line)}
 .brnav .wrap{display:flex;gap:8px;align-items:center;overflow-x:auto;padding-top:12px;padding-bottom:12px}
@@ -297,6 +300,7 @@ body{font-size:16px;letter-spacing:-.003em}
 .galg img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;cursor:zoom-in}
 @media(max-width:860px){.loc,.solo{grid-template-columns:1fr}.galg{grid-template-columns:repeat(2,1fr)}.loc iframe{height:300px}}
 </style>
+<noscript><style>.rv-in{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 <div class="top"><div class="wrap"><span>Selasa – Ahad · 11 pagi – 6 petang</span><span>Cawangan Sri Gombak · Nabila 017-672 0252</span></div></div>
@@ -308,7 +312,7 @@ body{font-size:16px;letter-spacing:-.003em}
 <div class="mnav" id="mnav" hidden><a href="/">Utama</a><a href="#dewan">Dewan</a><a href="#galeri">Galeri</a><a href="#lokasi">Lokasi</a><a href="#tempah">Tempah</a></div></header>
 <div class="brnav"><div class="wrap"><span>Cawangan:</span><a href="/kota-damansara/">Kota Damansara</a><a href="/selayang/">Selayang</a><a href="/sri-gombak/" class=on aria-current=page>Sri Gombak</a></div></div>
 
-<section class="hero" style="padding:0"><img src="/img/sg/sg05.jpg" alt="Dewan Sireh Junjung Sri Gombak dengan pelamin dan kerusi rotan" fetchpriority="high"><div class="wrap">
+<section class="hero" style="padding:0"><img src="/img/sg/sg05.jpg" alt="Dewan Sireh Junjung Sri Gombak dengan pelamin dan kerusi rotan" fetchpriority="high" width="1080" height="608"><div class="wrap">
     <p class="crumb"><a href="/">Sireh Junjung</a> › Cawangan Sri Gombak</p>
     <span class="kick">Cawangan Sri Gombak</span>
     <h1>Sireh Junjung di <em>Sri Gombak.</em></h1>
@@ -321,7 +325,7 @@ body{font-size:16px;letter-spacing:-.003em}
   <span class="kick">Dewan · Sri Gombak</span>
   <h2>Intim dan anggun, <em>untuk 60 tetamu.</em></h2>
   <div class="solo">
-    <div class="ph"><img src="/img/sg/sg01.jpg" alt="Meja Viking panjang dengan kerusi rotan di dewan Sri Gombak" loading="lazy"></div>
+    <div class="ph"><img src="/img/sg/sg01.jpg" alt="Meja Viking panjang dengan kerusi rotan di dewan Sri Gombak" loading="lazy" width="810" height="1080"></div>
     <div>
       <h3 style="font-size:34px">Dewan Sri Gombak</h3>
       <ul>
@@ -337,10 +341,10 @@ body{font-size:16px;letter-spacing:-.003em}
     </div>
   </div>
 </div></section>
-<section id="galeri" class="ev-bg"><div class="wrap"><span class="kick">Galeri</span><h2>Majlis di <em>Sri Gombak.</em></h2><div class="galg" id="galg"><img src="/img/sg/t/sg05.jpg" data-f="/img/sg/sg05.jpg" data-i="0" alt="Majlis di Sireh Junjung Sri Gombak, gambar 1" loading="lazy"><img src="/img/sg/t/sg04.jpg" data-f="/img/sg/sg04.jpg" data-i="1" alt="Majlis di Sireh Junjung Sri Gombak, gambar 2" loading="lazy"><img src="/img/sg/t/sg01.jpg" data-f="/img/sg/sg01.jpg" data-i="2" alt="Majlis di Sireh Junjung Sri Gombak, gambar 3" loading="lazy"><img src="/img/sg/t/sg02.jpg" data-f="/img/sg/sg02.jpg" data-i="3" alt="Majlis di Sireh Junjung Sri Gombak, gambar 4" loading="lazy"><img src="/img/sg/t/sg03.jpg" data-f="/img/sg/sg03.jpg" data-i="4" alt="Majlis di Sireh Junjung Sri Gombak, gambar 5" loading="lazy"></div></div></section>
+<section id="galeri" class="ev-bg"><div class="wrap"><span class="kick">Galeri</span><h2>Majlis di <em>Sri Gombak.</em></h2><div class="galg" id="galg"><img src="/img/sg/t/sg05.jpg" data-f="/img/sg/sg05.jpg" data-i="0" alt="Majlis di Sireh Junjung Sri Gombak, gambar 1" loading="lazy" width="760" height="428"><img src="/img/sg/t/sg04.jpg" data-f="/img/sg/sg04.jpg" data-i="1" alt="Majlis di Sireh Junjung Sri Gombak, gambar 2" loading="lazy" width="428" height="760"><img src="/img/sg/t/sg01.jpg" data-f="/img/sg/sg01.jpg" data-i="2" alt="Majlis di Sireh Junjung Sri Gombak, gambar 3" loading="lazy" width="570" height="760"><img src="/img/sg/t/sg02.jpg" data-f="/img/sg/sg02.jpg" data-i="3" alt="Majlis di Sireh Junjung Sri Gombak, gambar 4" loading="lazy" width="570" height="760"><img src="/img/sg/t/sg03.jpg" data-f="/img/sg/sg03.jpg" data-i="4" alt="Majlis di Sireh Junjung Sri Gombak, gambar 5" loading="lazy" width="570" height="760"></div></div></section>
 
 <section id="tempah"><div class="wrap bk">
-  <div class="pic rv-in"><img src="/img/sg/sg02.jpg" alt="Majlis di Sireh Junjung Sri Gombak" loading="lazy"></div>
+  <div class="pic rv-in"><img src="/img/sg/sg02.jpg" alt="Majlis di Sireh Junjung Sri Gombak" loading="lazy" width="810" height="1080"></div>
   <div>
     <span class="kick">Semak tarikh · Sri Gombak</span>
     <h2>Rancang <em>majlis anda.</em></h2>
@@ -375,7 +379,7 @@ body{font-size:16px;letter-spacing:-.003em}
 
 <footer><div class="wrap">
   <div class="g">
-    <div><span class="lg"><img src="/img/logo.jpg" alt="Sireh Junjung Banquet Hall" loading="lazy"></span><p style="margin-top:16px;max-width:300px">Dewan perkahwinan dan majlis di Kota Damansara, Selayang dan Sri Gombak.</p></div>
+    <div><span class="lg"><img src="/img/logo.jpg" alt="Sireh Junjung Banquet Hall" loading="lazy" width="640" height="434"></span><p style="margin-top:16px;max-width:300px">Dewan perkahwinan dan majlis di Kota Damansara, Selayang dan Sri Gombak.</p></div>
     <div><h4>Cawangan</h4><ul><li><a href="/kota-damansara/">Kota Damansara · Dewi</a></li><li><a href="/selayang/">Selayang · Danial</a></li><li><a href="/sri-gombak/">Sri Gombak · Nabila</a></li></ul></div>
     <div><h4>Pautan</h4><ul><li><a href="/">Halaman utama</a></li><li><a href="#tempah">Semak tarikh</a></li><li><a href="#lokasi">Lokasi</a></li></ul></div>
     <div><h4>Pejabat</h4><ul><li>Selasa – Ahad, 11 pagi – 6 petang</li><li>Isnin: cuti</li><li>WhatsApp: <a href="https://wa.me/601162186678" target="_blank" rel="noopener">011-6218 6678</a></li></ul></div>

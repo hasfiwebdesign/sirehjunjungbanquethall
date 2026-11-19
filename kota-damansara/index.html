@@ -22,7 +22,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-variant-numeric:lining-nums;font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--ivory);color:var(--ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 .serif{font-family:"Cormorant Garamond",Georgia,serif}
@@ -265,10 +265,13 @@ footer .cp{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top
  .mbar a{padding:13px;border-radius:12px;text-align:center;font-weight:600;font-size:15px}
  footer{padding-bottom:110px}
 }
+.lg img,.logo img{width:auto}
 /* tipografi v2 */
 [style*="Cormorant"],h1,h2,h3,.kick+h2 em,h2 em,h1 em{font-weight:600}
 body{font-size:16px;letter-spacing:-.003em}
 @media(max-width:640px){h2{font-size:clamp(36px,9.4vw,44px)}h3{font-size:30px}}
+
+@media(prefers-reduced-motion:reduce){.rv-in{opacity:1!important;transform:none!important;transition:none!important}}
 
 .brnav{background:#fff;border-bottom:1px solid var(--line)}
 .brnav .wrap{display:flex;gap:8px;align-items:center;overflow-x:auto;padding-top:12px;padding-bottom:12px}
@@ -297,6 +300,7 @@ body{font-size:16px;letter-spacing:-.003em}
 .galg img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;cursor:zoom-in}
 @media(max-width:860px){.loc,.solo{grid-template-columns:1fr}.galg{grid-template-columns:repeat(2,1fr)}.loc iframe{height:300px}}
 </style>
+<noscript><style>.rv-in{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
 <div class="top"><div class="wrap"><span>Selasa – Ahad · 11 pagi – 6 petang</span><span>Cawangan Kota Damansara · Dewi 018-397 5072</span></div></div>
@@ -308,7 +312,7 @@ body{font-size:16px;letter-spacing:-.003em}
 <div class="mnav" id="mnav" hidden><a href="/">Utama</a><a href="#dewan">Dewan</a><a href="#galeri">Galeri</a><a href="#lokasi">Lokasi</a><a href="#tempah">Tempah</a></div></header>
 <div class="brnav"><div class="wrap"><span>Cawangan:</span><a href="/kota-damansara/" class=on aria-current=page>Kota Damansara</a><a href="/selayang/">Selayang</a><a href="/sri-gombak/">Sri Gombak</a></div></div>
 
-<section class="hero" style="padding:0"><img src="/img/hero.jpg" alt="Grand Hall Sireh Junjung Kota Damansara berhias bunga putih" fetchpriority="high"><div class="wrap">
+<section class="hero" style="padding:0"><img src="/img/hero.jpg" alt="Grand Hall Sireh Junjung Kota Damansara berhias bunga putih" fetchpriority="high" width="1400" height="933"><div class="wrap">
     <p class="crumb"><a href="/">Sireh Junjung</a> › Cawangan Kota Damansara</p>
     <span class="kick">Cawangan Kota Damansara</span>
     <h1>Dewan perkahwinan di <em>Kota Damansara.</em></h1>
@@ -323,8 +327,8 @@ body{font-size:16px;letter-spacing:-.003em}
   <p class="sub">Langsungkan akad nikah di Mini Grand Hall, kemudian bersanding di Grand Hall. Kedua-dua dewan terletak di tingkat satu Encorp Strand Mall, dengan tempat letak kereta yang luas dan dewan yang dingin serta selesa.</p>
   <div class="halls">
     <article class="hall rv-in">
-      <div class="ph"><img src="/img/gh1.jpg" alt="Grand Hall dengan kerusi putih dan hiasan bunga" loading="lazy"><span class="badge">Resepsi & persandingan</span></div>
-      <div class="thumbs"><img src="/img/t/gh2.jpg" alt="Meja tetamu Grand Hall" loading="lazy" data-g><img src="/img/t/gh3.jpg" alt="Grand Hall dengan laluan merah" loading="lazy" data-g><img src="/img/t/fd1.jpg" alt="Hidangan di meja pengantin" loading="lazy" data-g></div>
+      <div class="ph"><img src="/img/gh1.jpg" alt="Grand Hall dengan kerusi putih dan hiasan bunga" loading="lazy" width="1080" height="720"><span class="badge">Resepsi & persandingan</span></div>
+      <div class="thumbs"><img src="/img/t/gh2.jpg" alt="Meja tetamu Grand Hall" loading="lazy" data-g width="760" height="507"><img src="/img/t/gh3.jpg" alt="Grand Hall dengan laluan merah" loading="lazy" data-g width="570" height="760"><img src="/img/t/fd1.jpg" alt="Hidangan di meja pengantin" loading="lazy" data-g width="570" height="760"></div>
       <div class="bd">
         <h3>Grand Hall</h3>
         <p>Dewan utama berkerusi putih untuk majlis resepsi dan persandingan. Dilengkapi siling tinggi, lampu kristal dan laluan pengantin menuju ke pelamin.</p>
@@ -333,8 +337,8 @@ body{font-size:16px;letter-spacing:-.003em}
       </div>
     </article>
     <article class="hall rv-in">
-      <div class="ph"><img src="/img/mh1.jpg" alt="Mini Grand Hall dengan kerusi lut sinar dan pentas" loading="lazy"><span class="badge">Akad nikah</span></div>
-      <div class="thumbs"><img src="/img/t/mh2.jpg" alt="Meja Mini Grand Hall" loading="lazy" data-g><img src="/img/t/pl1.jpg" alt="Pelamin putih untuk akad nikah" loading="lazy" data-g><img src="/img/t/mh4.jpg" alt="Pentas Mini Grand Hall" loading="lazy" data-g></div>
+      <div class="ph"><img src="/img/mh1.jpg" alt="Mini Grand Hall dengan kerusi lut sinar dan pentas" loading="lazy" width="1080" height="720"><span class="badge">Akad nikah</span></div>
+      <div class="thumbs"><img src="/img/t/mh2.jpg" alt="Meja Mini Grand Hall" loading="lazy" data-g width="760" height="507"><img src="/img/t/pl1.jpg" alt="Pelamin putih untuk akad nikah" loading="lazy" data-g width="760" height="507"><img src="/img/t/mh4.jpg" alt="Pentas Mini Grand Hall" loading="lazy" data-g width="760" height="507"></div>
       <div class="bd">
         <h3>Mini Grand Hall</h3>
         <p>Dewan yang lebih kecil dan mesra dengan kerusi lut sinar, sesuai untuk akad nikah, majlis tunang dan majlis keluarga.</p>
@@ -344,7 +348,7 @@ body{font-size:16px;letter-spacing:-.003em}
     </article>
   </div>
 </div></section>
-<section id="galeri" class="ev-bg"><div class="wrap"><span class="kick">Galeri</span><h2>Majlis di <em>Kota Damansara.</em></h2><div class="galg" id="galg"><img src="/img/t/hero.jpg" data-f="/img/hero.jpg" data-i="0" alt="Majlis di Sireh Junjung Kota Damansara, gambar 1" loading="lazy"><img src="/img/t/mh1.jpg" data-f="/img/mh1.jpg" data-i="1" alt="Majlis di Sireh Junjung Kota Damansara, gambar 2" loading="lazy"><img src="/img/t/pl1.jpg" data-f="/img/pl1.jpg" data-i="2" alt="Majlis di Sireh Junjung Kota Damansara, gambar 3" loading="lazy"><img src="/img/t/gh2.jpg" data-f="/img/gh2.jpg" data-i="3" alt="Majlis di Sireh Junjung Kota Damansara, gambar 4" loading="lazy"><img src="/img/t/pl2.jpg" data-f="/img/pl2.jpg" data-i="4" alt="Majlis di Sireh Junjung Kota Damansara, gambar 5" loading="lazy"><img src="/img/t/fd1.jpg" data-f="/img/fd1.jpg" data-i="5" alt="Majlis di Sireh Junjung Kota Damansara, gambar 6" loading="lazy"><img src="/img/t/gh3.jpg" data-f="/img/gh3.jpg" data-i="6" alt="Majlis di Sireh Junjung Kota Damansara, gambar 7" loading="lazy"><img src="/img/t/mh2.jpg" data-f="/img/mh2.jpg" data-i="7" alt="Majlis di Sireh Junjung Kota Damansara, gambar 8" loading="lazy"><img src="/img/t/pl3.jpg" data-f="/img/pl3.jpg" data-i="8" alt="Majlis di Sireh Junjung Kota Damansara, gambar 9" loading="lazy"><img src="/img/t/kd16.jpg" data-f="/img/kd16.jpg" data-i="9" alt="Majlis di Sireh Junjung Kota Damansara, gambar 10" loading="lazy"><img src="/img/t/arch.jpg" data-f="/img/arch.jpg" data-i="10" alt="Majlis di Sireh Junjung Kota Damansara, gambar 11" loading="lazy"><img src="/img/t/pel2.jpg" data-f="/img/pel2.jpg" data-i="11" alt="Majlis di Sireh Junjung Kota Damansara, gambar 12" loading="lazy"><img src="/img/t/couple.jpg" data-f="/img/couple.jpg" data-i="12" alt="Majlis di Sireh Junjung Kota Damansara, gambar 13" loading="lazy"><img src="/img/t/cake.jpg" data-f="/img/cake.jpg" data-i="13" alt="Majlis di Sireh Junjung Kota Damansara, gambar 14" loading="lazy"><img src="/img/t/gh4.jpg" data-f="/img/gh4.jpg" data-i="14" alt="Majlis di Sireh Junjung Kota Damansara, gambar 15" loading="lazy"><img src="/img/t/mh4.jpg" data-f="/img/mh4.jpg" data-i="15" alt="Majlis di Sireh Junjung Kota Damansara, gambar 16" loading="lazy"><img src="/img/t/corp.jpg" data-f="/img/corp.jpg" data-i="16" alt="Majlis di Sireh Junjung Kota Damansara, gambar 17" loading="lazy"><img src="/img/t/bday.jpg" data-f="/img/bday.jpg" data-i="17" alt="Majlis di Sireh Junjung Kota Damansara, gambar 18" loading="lazy"></div></div></section>
+<section id="galeri" class="ev-bg"><div class="wrap"><span class="kick">Galeri</span><h2>Majlis di <em>Kota Damansara.</em></h2><div class="galg" id="galg"><img src="/img/t/hero.jpg" data-f="/img/hero.jpg" data-i="0" alt="Majlis di Sireh Junjung Kota Damansara, gambar 1" loading="lazy" width="760" height="507"><img src="/img/t/mh1.jpg" data-f="/img/mh1.jpg" data-i="1" alt="Majlis di Sireh Junjung Kota Damansara, gambar 2" loading="lazy" width="760" height="507"><img src="/img/t/pl1.jpg" data-f="/img/pl1.jpg" data-i="2" alt="Majlis di Sireh Junjung Kota Damansara, gambar 3" loading="lazy" width="760" height="507"><img src="/img/t/gh2.jpg" data-f="/img/gh2.jpg" data-i="3" alt="Majlis di Sireh Junjung Kota Damansara, gambar 4" loading="lazy" width="760" height="507"><img src="/img/t/pl2.jpg" data-f="/img/pl2.jpg" data-i="4" alt="Majlis di Sireh Junjung Kota Damansara, gambar 5" loading="lazy" width="760" height="507"><img src="/img/t/fd1.jpg" data-f="/img/fd1.jpg" data-i="5" alt="Majlis di Sireh Junjung Kota Damansara, gambar 6" loading="lazy" width="570" height="760"><img src="/img/t/gh3.jpg" data-f="/img/gh3.jpg" data-i="6" alt="Majlis di Sireh Junjung Kota Damansara, gambar 7" loading="lazy" width="570" height="760"><img src="/img/t/mh2.jpg" data-f="/img/mh2.jpg" data-i="7" alt="Majlis di Sireh Junjung Kota Damansara, gambar 8" loading="lazy" width="760" height="507"><img src="/img/t/pl3.jpg" data-f="/img/pl3.jpg" data-i="8" alt="Majlis di Sireh Junjung Kota Damansara, gambar 9" loading="lazy" width="760" height="507"><img src="/img/t/kd16.jpg" data-f="/img/kd16.jpg" data-i="9" alt="Majlis di Sireh Junjung Kota Damansara, gambar 10" loading="lazy" width="507" height="760"><img src="/img/t/arch.jpg" data-f="/img/arch.jpg" data-i="10" alt="Majlis di Sireh Junjung Kota Damansara, gambar 11" loading="lazy" width="342" height="760"><img src="/img/t/pel2.jpg" data-f="/img/pel2.jpg" data-i="11" alt="Majlis di Sireh Junjung Kota Damansara, gambar 12" loading="lazy" width="760" height="507"><img src="/img/t/couple.jpg" data-f="/img/couple.jpg" data-i="12" alt="Majlis di Sireh Junjung Kota Damansara, gambar 13" loading="lazy" width="752" height="760"><img src="/img/t/cake.jpg" data-f="/img/cake.jpg" data-i="13" alt="Majlis di Sireh Junjung Kota Damansara, gambar 14" loading="lazy" width="760" height="759"><img src="/img/t/gh4.jpg" data-f="/img/gh4.jpg" data-i="14" alt="Majlis di Sireh Junjung Kota Damansara, gambar 15" loading="lazy" width="570" height="760"><img src="/img/t/mh4.jpg" data-f="/img/mh4.jpg" data-i="15" alt="Majlis di Sireh Junjung Kota Damansara, gambar 16" loading="lazy" width="760" height="507"><img src="/img/t/corp.jpg" data-f="/img/corp.jpg" data-i="16" alt="Majlis di Sireh Junjung Kota Damansara, gambar 17" loading="lazy" width="760" height="760"><img src="/img/t/bday.jpg" data-f="/img/bday.jpg" data-i="17" alt="Majlis di Sireh Junjung Kota Damansara, gambar 18" loading="lazy" width="760" height="760"></div></div></section>
 <section class="rev-bg"><div class="wrap"><span class="kick">Ulasan Google</span><h2>Kata pengantin di <em>Kota Damansara.</em></h2><div class="revs">
     <div class="rv rv-in"><span class="st">★★★★★</span><q>My family memang tak pernah regret pilih hall ni. The nikah hall is super cantik, and the sanding hall is even more beautiful. Still remember masa bulan 1 datang first time nak tengok hall, my mum literally fall in love at first sight…</q><span class="who"><b>Darwisyah Haliquzaman</b>Pengantin</span></div>
     <div class="rv rv-in"><span class="st">★★★★★</span><q>We just had our wedding here, and everything exceeded our expectations! The hall was beautiful, clean, and decorated perfectly! The food was absolutely delicious, even our guests kept complimenting it…</q><span class="who"><b>Hanis Fazli</b>Pengantin</span></div>
@@ -355,7 +359,7 @@ body{font-size:16px;letter-spacing:-.003em}
   </div>
   <div class="gbadge"><b>4.5</b><div><span class="st" style="color:var(--gold2);letter-spacing:3px">★★★★★</span><br><span>290 ulasan di Google Maps</span></div><a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Sireh+Junjung+Banquet+Hall+Encorp+Strand+Mall" target="_blank" rel="noopener">Baca semua ulasan</a></div></div></section>
 <section id="tempah"><div class="wrap bk">
-  <div class="pic rv-in"><img src="/img/gh2.jpg" alt="Majlis di Sireh Junjung Kota Damansara" loading="lazy"></div>
+  <div class="pic rv-in"><img src="/img/gh2.jpg" alt="Majlis di Sireh Junjung Kota Damansara" loading="lazy" width="1080" height="720"></div>
   <div>
     <span class="kick">Semak tarikh · Kota Damansara</span>
     <h2>Rancang <em>majlis anda.</em></h2>
@@ -393,7 +397,7 @@ body{font-size:16px;letter-spacing:-.003em}
 
 <footer><div class="wrap">
   <div class="g">
-    <div><span class="lg"><img src="/img/logo.jpg" alt="Sireh Junjung Banquet Hall" loading="lazy"></span><p style="margin-top:16px;max-width:300px">Dewan perkahwinan dan majlis di Kota Damansara, Selayang dan Sri Gombak.</p></div>
+    <div><span class="lg"><img src="/img/logo.jpg" alt="Sireh Junjung Banquet Hall" loading="lazy" width="640" height="434"></span><p style="margin-top:16px;max-width:300px">Dewan perkahwinan dan majlis di Kota Damansara, Selayang dan Sri Gombak.</p></div>
     <div><h4>Cawangan</h4><ul><li><a href="/kota-damansara/">Kota Damansara · Dewi</a></li><li><a href="/selayang/">Selayang · Danial</a></li><li><a href="/sri-gombak/">Sri Gombak · Nabila</a></li></ul></div>
     <div><h4>Pautan</h4><ul><li><a href="/">Halaman utama</a></li><li><a href="#tempah">Semak tarikh</a></li><li><a href="#lokasi">Lokasi</a></li></ul></div>
     <div><h4>Pejabat</h4><ul><li>Selasa – Ahad, 11 pagi – 6 petang</li><li>Isnin: cuti</li><li>WhatsApp: <a href="https://wa.me/601162186678" target="_blank" rel="noopener">011-6218 6678</a></li></ul></div>

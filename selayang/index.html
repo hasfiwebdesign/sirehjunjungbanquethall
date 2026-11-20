@@ -367,7 +367,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .galg img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;cursor:zoom-in}
 @media(max-width:860px){.loc,.solo{grid-template-columns:1fr}.galg{grid-template-columns:repeat(2,1fr)}.loc iframe{height:300px}}
 .cwg{background:var(--leaf);color:#f3ece0;font:600 12.5px/1 "Plus Jakarta Sans",sans-serif;letter-spacing:.04em}.cwg .wrap{height:auto;display:flex;justify-content:center;align-items:center;gap:6px 18px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}.cwg a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:5px;white-space:nowrap}.cwg a:hover,.cwg a[aria-current]{color:#e9cf98}.cwg svg{width:13px;height:13px;flex:none}.logo{display:flex;align-items:center}.logo img{height:58px;width:auto}@media(max-width:620px){.cwg{font-size:11.5px}.cwg .wrap{gap:4px 12px}.logo img{height:46px}}
-</style>
+.brnav{background:#fff;border-bottom:1px solid var(--line)}.brnav .wrap{display:flex;gap:6px;align-items:center;justify-content:center;overflow-x:auto;padding-top:10px;padding-bottom:10px;height:auto;scrollbar-width:none}.brnav .wrap::-webkit-scrollbar{display:none}.brnav span{display:none}.brnav a{white-space:nowrap;padding:7px 14px;border-radius:999px;border:1px solid var(--line);font:500 13.5px "Plus Jakarta Sans",sans-serif;color:var(--ink,#1d2b22);text-decoration:none;background:#fff}.brnav a:hover{border-color:var(--leaf)}.brnav a.on{background:var(--leaf);color:#fff;border-color:var(--leaf)}@media(max-width:380px){.brnav a{padding:7px 10px;font-size:12.5px}}</style>
 <noscript><style>.rv-in{opacity:1!important;transform:none!important}</style></noscript>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZQL44YHQE"></script>
@@ -376,14 +376,13 @@ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.c
 document.addEventListener('submit',function(e){gtag('event','generate_lead',{form_id:(e.target&&e.target.id)||'borang'})},true);</script>
 </head>
 <body>
-<header><div class="cwg"><div class="wrap"><a href="/kota-damansara/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Kota Damansara</a><a href="/selayang/" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Selayang</a><a href="/sri-gombak/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Sri Gombak</a></div></div><div class="wrap">
+<header><div class="brnav"><div class="wrap"><span>Cawangan:</span><a href="/kota-damansara/">Kota Damansara</a><a href="/selayang/" class="on" aria-current="page">Selayang</a><a href="/sri-gombak/">Sri Gombak</a></div></div><div class="wrap">
   <a href="/" class="logo" aria-label="Sireh Junjung Banquet Hall"><img src="/img/logo.jpg" alt="Logo Sireh Junjung Banquet Hall" width="86" height="58"></a>
   <nav><a href="/">Utama</a><a href="#dewan">Dewan</a><a href="#galeri">Galeri</a><a href="#lokasi">Lokasi</a><a href="#tempah">Tempah</a></nav>
   <div class="hd-r"><button class="mnu" id="mnu" aria-label="Menu" aria-expanded="false"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button><a href="#tempah" class="btn btn-gold">Semak tarikh</a></div>
 </div>
 <div class="mnav" id="mnav" hidden><a href="/">Utama</a><a href="#dewan">Dewan</a><a href="#galeri">Galeri</a><a href="#lokasi">Lokasi</a><a href="#tempah">Tempah</a></div></header>
 <div class="top"><div class="wrap"><span>Selasa – Ahad · 11 pagi – 6 petang</span><span>Cawangan Selayang · Danial 011-2182 0084</span></div></div>
-<div class="brnav"><div class="wrap"><span>Cawangan:</span><a href="/kota-damansara/">Kota Damansara</a><a href="/selayang/" class=on aria-current=page>Selayang</a><a href="/sri-gombak/">Sri Gombak</a></div></div>
 
 <section class="hero" style="padding:0"><img src="/img/sl/sl01.webp" alt="Pelamin putih berhias bunga segar di dewan Sireh Junjung Selayang" fetchpriority="high" width="1400" height="934"><div class="wrap">
     <p class="crumb"><a href="/">Sireh Junjung</a> › Cawangan Selayang</p>

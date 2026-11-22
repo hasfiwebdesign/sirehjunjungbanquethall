@@ -374,6 +374,9 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-4ZQL44YHQE');
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('wa.me')>-1)gtag('event','klik_whatsapp',{link_url:h.split('?')[0]});else if(h.indexOf('tel:')===0)gtag('event','klik_telefon',{link_url:h});else if(/waze|google\.com\/maps/.test(h))gtag('event','klik_arah',{link_url:h.split('?')[0]})},true);
 document.addEventListener('submit',function(e){gtag('event','generate_lead',{form_id:(e.target&&e.target.id)||'borang'})},true);</script>
+<!-- Meta Pixel -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1765166614554544');fbq('track','PageView');
+(function(){var T=0;function ev(n){var d=Date.now();if(d-T<1500)return;T=d;fbq('track',n)}var o=window.open;window.open=function(u){try{if(/wa\.me|whatsapp/i.test(String(u)))ev('Lead')}catch(e){}return o.apply(window,arguments)};document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';if(/wa\.me|whatsapp\.com/.test(h))ev(a.id==='go'||a.id==='mbgo'?'Lead':'Contact');else if(h.indexOf('tel:')===0)ev('Contact')},true)})();</script>
 </head>
 <body>
 <header><div class="brnav"><div class="wrap"><span>Cawangan:</span><a href="/kota-damansara/" class="on" aria-current="page">Kota Damansara</a><a href="/selayang/">Selayang</a><a href="/sri-gombak/">Sri Gombak</a></div></div><div class="wrap">

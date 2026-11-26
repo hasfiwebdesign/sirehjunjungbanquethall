@@ -281,6 +281,7 @@ body{font-size:16px;letter-spacing:-.003em}
 .sl{position:absolute;inset:0;overflow:hidden;background:#1a2a20}
 .sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;will-change:opacity,transform;animation:kb 24s linear infinite}
 .sl img:nth-child(1){animation-name:kb1}
+.sl .hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease;z-index:1}.sl .hv.on{opacity:1}
 .sl img:nth-child(2){animation-delay:6s}.sl img:nth-child(3){animation-delay:12s}.sl img:nth-child(4){animation-delay:18s}
 @keyframes kb{0%{opacity:0;transform:scale(1.14) translate3d(1%,0,0)}5%{opacity:1}25%{opacity:1}33%{opacity:0;transform:scale(1.02) translate3d(-1%,-1%,0)}100%{opacity:0;transform:scale(1.02)}}
 @keyframes kb1{0%{opacity:1;transform:scale(1.14)}25%{opacity:1}33%{opacity:0;transform:scale(1.02) translate3d(-1%,-1%,0)}95%{opacity:0;transform:scale(1.14)}100%{opacity:1;transform:scale(1.14)}}
@@ -362,7 +363,7 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
 <div class="top"><div class="wrap"><span data-t="top1">Selasa – Ahad · 11 pagi – 6 petang</span><span data-t="top2">Kota Damansara · Selayang · Sri Gombak</span></div></div>
 
 <section class="hero film" style="padding:0">
-  <div class="sl"><img src="img/hero.webp" alt="Grand Hall Sireh Junjung berhias bunga putih dengan laluan pengantin" fetchpriority="high" width="1400" height="933"><img src="img/sl/sl03.webp" alt="" loading="lazy" width="1400" height="934"><img src="img/pl1.webp" alt="" loading="lazy" width="1080" height="720"><img src="img/sl/sl04.webp" alt="" loading="lazy" width="1400" height="934"></div>
+  <div class="sl"><img src="img/hero.webp" alt="Grand Hall Sireh Junjung berhias bunga putih dengan laluan pengantin" fetchpriority="high" width="1400" height="933"><img src="img/sl/sl03.webp" alt="" loading="lazy" width="1400" height="934"><img src="img/pl1.webp" alt="" loading="lazy" width="1080" height="720"><img src="img/sl/sl04.webp" alt="" loading="lazy" width="1400" height="934"><video class="hv" id="hv" muted loop playsinline preload="none" aria-hidden="true"></video></div>
   <div class="wrap">
     <span class="kick" data-t="h0">Dewan perkahwinan · Lembah Klang</span>
     <h1 data-t="h1">Hari bahagia, <em>di dewan yang memukau.</em></h1>
@@ -607,5 +608,6 @@ document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return
 })();
 </script>
 
+<script>(function(){var v=document.getElementById('hv');if(!v)return;var c=navigator.connection;if(matchMedia('(prefers-reduced-motion:reduce)').matches||(c&&c.saveData))return;var m=matchMedia('(max-aspect-ratio:1/1)').matches;v.poster=m?'/video/hero-mobile.jpg':'/video/hero-desktop.jpg';v.src=m?'/video/hero-mobile.mp4':'/video/hero-desktop.mp4';v.addEventListener('playing',function(){v.classList.add('on')},{once:true});v.load();var p=v.play();if(p&&p.catch)p.catch(function(){});})();</script>
 </body>
 </html>

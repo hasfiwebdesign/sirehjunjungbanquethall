@@ -15,7 +15,7 @@
 <link rel="icon" href="/img/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "EventVenue", "@id": "https://sirehjunjungbanquethall.com/kota-damansara/#venue", "name": "Sireh Junjung Banquet Hall Kota Damansara", "url": "https://sirehjunjungbanquethall.com/kota-damansara/", "image": "https://sirehjunjungbanquethall.com/img/hero.jpg", "telephone": "+60183975072", "address": {"@type": "PostalAddress", "streetAddress": "F55, Jalan PJU 5/20e, Encorp Strand Mall, Kota Damansara", "addressLocality": "Petaling Jaya", "postalCode": "47810", "addressRegion": "Selangor", "addressCountry": "MY"}, "openingHours": "Tu-Su 11:00-18:00", "parentOrganization": {"@id": "https://sirehjunjungbanquethall.com/#org", "name": "Sireh Junjung Banquet Hall"}, "maximumAttendeeCapacity": 320}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "EventVenue", "@id": "https://sirehjunjungbanquethall.com/kota-damansara/#venue", "name": "Sireh Junjung Banquet Hall Kota Damansara", "url": "https://sirehjunjungbanquethall.com/kota-damansara/", "image": "https://sirehjunjungbanquethall.com/img/hero.jpg", "telephone": "+60183975072", "address": {"@type": "PostalAddress", "streetAddress": "F55, Jalan PJU 5/20e, Encorp Strand Mall, Kota Damansara", "addressLocality": "Petaling Jaya", "postalCode": "47810", "addressRegion": "Selangor", "addressCountry": "MY"}, "openingHours": "Tu-Su 11:00-18:00", "parentOrganization": {"@id": "https://sirehjunjungbanquethall.com/#org", "name": "Sireh Junjung Banquet Hall"}, "maximumAttendeeCapacity": 320, "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJobTM8WlPzDER53sfwjkQ008"}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Sireh Junjung Banquet Hall", "item": "https://sirehjunjungbanquethall.com/"}, {"@type": "ListItem", "position": 2, "name": "Kota Damansara", "item": "https://sirehjunjungbanquethall.com/kota-damansara/"}]}</script>
 <style>
 :root{--ivory:#fbf8f2;--cream:#f3ece0;--sand:#e7dcc9;--leaf:#1f3b2d;--leaf2:#2e5a43;--sage:#6f8f74;--gold:#b08d4f;--gold2:#c9a96a;--ink:#1d1d1b;--mute:#4a463f;--line:#e3d9c8;--wa:#25d366}
@@ -471,6 +471,7 @@ document.addEventListener('submit',function(e){gtag('event','generate_lead',{for
   </div>
 </div></section>
 
+<section class="hwd-ulasan" style="text-align:center;padding:40px 20px;border-top:1px solid rgba(127,127,127,.25)"><p style="margin:0 0 6px;font-size:1.15rem;font-weight:700">Pernah buat majlis di Sireh Junjung Kota Damansara?</p><p style="margin:0 0 16px;opacity:.8">Kongsikan pengalaman di Google. Ulasan tuan/puan membantu orang lain membuat pilihan.</p><a href="https://search.google.com/local/writereview?placeid=ChIJobTM8WlPzDER53sfwjkQ008" target="_blank" rel="noopener" style="display:inline-block;padding:12px 22px;border-radius:999px;background:#fff;color:#1f1f1f;border:1px solid #dadce0;font-weight:700;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,.15)"><span style="color:#fbbc04">&#9733;</span> Tulis ulasan Google</a></section>
 <footer><div class="wrap">
   <div class="g">
     <div><span class="lg"><img src="/img/logo-krim.png" alt="Sireh Junjung Banquet Hall" loading="lazy" width="640" height="434"></span><p style="margin-top:16px;max-width:300px">Dewan perkahwinan dan majlis di Kota Damansara, Selayang dan Sri Gombak.</p></div>
@@ -515,7 +516,7 @@ const hantar=jenis=>{try{fetch(U,{method:'POST',keepalive:true,headers:{apikey:K
 window.hwdHantar=hantar;try{if(!sessionStorage.getItem('hwd_l')){sessionStorage.setItem('hwd_l','1');hantar('lawat')}}catch(e){hantar('lawat')}
 document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.href||'';
  if(h.includes('wa.me/')){if((a.id==='go'||a.id==='mbgo')&&!h.includes('?text='))return;hantar(a.id==='go'||a.id==='mbgo'?'wa_kira':'wa')}
- else if(h.includes('google.com/maps'))hantar('peta');else if(h.includes('instagram.com'))hantar('ig');else if(h.includes('tiktok.com'))hantar('tiktok')},true);
+ else if(h.includes('writereview'))hantar('ulasan');else if(h.includes('google.com/maps'))hantar('peta');else if(h.includes('instagram.com'))hantar('ig');else if(h.includes('tiktok.com'))hantar('tiktok')},true);
 })();
 </script>
 </body>
